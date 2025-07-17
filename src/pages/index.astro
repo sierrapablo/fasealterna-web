@@ -1,16 +1,38 @@
 ---
-import "../styles/global.css"
+import "../styles/global.css";
+import SocialIcons from "../components/SocialIcons";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Fase Alterna</title>
+  </head>
+  <body class="relative h-dvh w-full flex flex-col">
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url(/background.avif);"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <SocialIcons client:load />
+
+    <main class="relative z-10 flex items-center justify-center h-full">
+      <img
+        src="/logo-w-box.png"
+        alt="Logo de Fase Alterna"
+        class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
+      />
+    </main>
+    <footer class="relative z-10 text-white text-center py-4">
+      <div class="flex flex-col items-center space-y-1">
+        <span class="text-sm">fasealternamusic@gmail.com</span>
+        <span class="text-xs">© 2025 Fase Alterna</span>
+      </div>
+    </footer>
+  </body>
 </html>
