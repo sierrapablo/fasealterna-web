@@ -19,14 +19,28 @@ import SocialIcons from "../components/SocialIcons";
     </div>
     <div class="absolute inset-0 bg-black/30"></div>
 
-    <SocialIcons client:load />
-
-    <main class="relative z-10 flex items-center justify-center h-full">
+    <main
+      class="relative z-10 flex flex-col items-center justify-end h-full gap-20 px-4 pb-8"
+    >
+      <SocialIcons client:load />
       <img
         src="/logo-w-box.png"
         alt="Logo de Fase Alterna"
         class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
       />
+      <a
+        href="/conciertos"
+        class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+      >
+        Conciertos
+      </a>
+      <iframe
+        class="w-full max-w-md"
+        style="aspect-ratio: 16 / 10;"
+        src="https://open.spotify.com/embed/album/0AToPZp8e6vGzo5Y4wzH27?utm_source=generator&theme=0"
+        width="100%"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
     </main>
     <footer class="relative z-10 text-white text-center py-4">
       <div class="flex flex-col items-center space-y-1">
