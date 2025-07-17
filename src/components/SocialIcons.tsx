@@ -2,7 +2,7 @@ import { FaInstagram, FaSpotify, FaTiktok, FaSoundcloud, FaYoutube } from "react
 
 export default function SocialIcons() {
   return (
-    <div className="flex gap-4 absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
+    <div className="flex gap-4 justify-center z-20">
       <a
         href="https://instagram.com/fase_alterna"
         target="_blank"
