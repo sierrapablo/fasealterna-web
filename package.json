@@ -11,12 +11,19 @@
   "dependencies": {
     "@astrojs/netlify": "^6.5.1",
     "@astrojs/react": "^4.3.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@iconify/react": "^6.0.0",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "astro": "^5.11.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-icon": "^1.0.0",
+    "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.11"
   }
 }
