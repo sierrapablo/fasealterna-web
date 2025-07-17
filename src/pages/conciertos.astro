@@ -1,0 +1,82 @@
+---
+import "../styles/global.css";
+import SocialIcons from "../components/SocialIcons.tsx"; // Ajusta si usas .jsx o .tsx
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Conciertos - Fase Alterna</title>
+  </head>
+  <body class="relative h-dvh w-full flex flex-col">
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url(/background.avif);"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black/30"></div>
+    <main
+      class="relative z-10 flex flex-col items-center justify-end h-full gap-20 px-4 pb-8"
+    >
+      <SocialIcons client:load />
+
+      <img
+        src="/logo-w-box.png"
+        alt="Logo de Fase Alterna"
+        class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
+      />
+      <section class="w-full max-w-4xl bg-black/40 p-6 rounded-md text-white">
+        <table class="w-full table-auto border-collapse">
+          <tbody>
+            <tr style="background-color: rgba(255, 255, 255, 0.2);">
+              <td class="px-4 py-2 text-center">31/07/2025</td>
+              <td class="px-4 py-2 text-center">BLACK NOTE CLUB - VALENCIA</td>
+              <td class="px-4 py-2 text-center">
+                <a
+                  href="https://www.blacknoteclub.com/event-details/fase-alterna"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:underline"
+                >
+                  ENTRADAS
+                </a>
+              </td>
+            </tr>
+            <tr style="background-color: rgba(255, 255, 255, 0.1);">
+              <td class="px-4 py-2 text-center">05/12/2025</td>
+              <td class="px-4 py-2 text-center">NAUW UR MUSIC VALENCIA</td>
+              <td class="px-4 py-2 text-center">
+                <a
+                  href="https://nauwurmusic.com/evento/valencia-loco-club-05-diciembre-2025/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:underline"
+                >
+                  ENTRADAS
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <div class="pt-20">
+        <label class="text-white text-center">Más fechas por confirmar</label>
+      </div>
+      <a
+        href="/"
+        class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+      >
+        Inicio
+      </a>
+    </main>
+
+    <footer class="relative z-10 text-white text-center py-4">
+      <div class="flex flex-col items-center space-y-1">
+        <span class="text-sm">fasealternamusic@gmail.com</span>
+        <span class="text-xs">© 2025 Fase Alterna</span>
+      </div>
+    </footer>
+  </body>
+</html>
