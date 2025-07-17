@@ -10,7 +10,7 @@ import SocialIcons from "../components/SocialIcons.tsx"; // Ajusta si usas .jsx 
     <meta name="viewport" content="width=device-width" />
     <title>Conciertos - Fase Alterna</title>
   </head>
-  <body class="relative h-dvh w-full flex flex-col">
+  <body class="relative w-full flex flex-col py-8">
     <div
       class="absolute inset-0 bg-cover bg-center"
       style="background-image: url(/background.avif);"
@@ -18,7 +18,7 @@ import SocialIcons from "../components/SocialIcons.tsx"; // Ajusta si usas .jsx 
     </div>
     <div class="absolute inset-0 bg-black/30"></div>
     <main
-      class="relative z-10 flex flex-col items-center justify-end h-full gap-20 px-4 pb-8"
+      class="relative z-10 flex flex-col items-center justify-end gap-20 px-4 pb-8"
     >
       <SocialIcons client:load />
 
@@ -27,7 +27,7 @@ import SocialIcons from "../components/SocialIcons.tsx"; // Ajusta si usas .jsx 
         alt="Logo de Fase Alterna"
         class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
       />
-      <section class="w-full max-w-4xl bg-black/40 p-6 rounded-md text-white">
+      <section class="w-full max-w-4xl p-6 text-white">
         <table class="w-full table-auto border-collapse">
           <tbody>
             <tr style="background-color: rgba(255, 255, 255, 0.2);">
