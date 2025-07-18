@@ -30,6 +30,12 @@ fasealterna-web/
 
 ---
 
+## ℹ️ Deploy status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f651f51c-ac01-4aab-b457-b785461e84b8/deploy-status)](https://app.netlify.com/projects/fasealterna/deploys)
+
+---
+
 ## 🧑‍💻 Autor
 
 Desarrollado por [@sierrapablo](https://github.com/sierrapablo) – desarrollador freelance & guitarrista de Fase Alterna.
