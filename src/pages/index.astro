@@ -3,6 +3,7 @@ import "../styles/global.css";
 import SocialIcons from "../components/SocialIcons.tsx";
 import Footer from "../components/Footer.astro";
 import FadeTransition from "../components/FadeTransition.astro";
+import About from "../components/About.astro";
 ---
 
 <html lang="es">
@@ -14,7 +15,7 @@ import FadeTransition from "../components/FadeTransition.astro";
     <title>Fase Alterna</title>
   </head>
   <body
-    class="w-full flex flex-col min-h-screen overflow-x-hidden bg-black text-white"
+    class="w-full flex flex-col min-h-screen overflow-x-hidden items-center bg-black text-white"
   >
     <FadeTransition />
     <!-- Sección superior -->
@@ -38,14 +39,28 @@ import FadeTransition from "../components/FadeTransition.astro";
           alt="Logo de Fase Alterna"
           class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
         />
-        <a
-          href="/conciertos"
-          class="mt-4 px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+        <div
+          class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xl mx-auto"
         >
-          Conciertos
-        </a>
+          <a
+            href="/conciertos"
+            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+          >
+            Conciertos
+          </a>
+          <a
+            href="/prensa"
+            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+          >
+            Kit de prensa
+          </a>
+        </div>
       </div>
     </section>
+
+    <!-- Sección central -->
+
+    <About />
 
     <!-- Sección inferior -->
     <section
@@ -76,6 +91,9 @@ import FadeTransition from "../components/FadeTransition.astro";
           allowfullscreen=""
           width="100%"
           height="430px"></iframe>
+        <div class="mt-12">
+          <SocialIcons client:load />
+        </div>
       </div>
 
       <!-- Footer fijo abajo -->
