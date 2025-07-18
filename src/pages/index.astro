@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import SocialIcons from "../components/SocialIcons.tsx";
 import Footer from "../components/Footer.astro";
+import FadeTransition from "../components/FadeTransition.astro";
 ---
 
 <html lang="es">
@@ -15,6 +16,7 @@ import Footer from "../components/Footer.astro";
   <body
     class="w-full flex flex-col min-h-screen overflow-x-hidden bg-black text-white"
   >
+    <FadeTransition />
     <!-- Sección superior -->
     <section
       class="relative w-full min-h-screen flex flex-col items-center justify-center gap-20 px-6"

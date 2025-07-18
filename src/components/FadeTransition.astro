@@ -1,0 +1,55 @@
+---
+// FadeTransition.astro
+---
+
+<style>
+  .fade-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    opacity: 1;
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity 0.7s ease-in-out;
+  }
+
+  .fade-overlay.fade-out {
+    opacity: 0;
+  }
+</style>
+
+<div id="fade-overlay" class="fade-overlay"></div>
+
+<script is:inline>
+  // Esperar a que cargue todo
+  window.addEventListener("DOMContentLoaded", () => {
+    const overlay = document.getElementById("fade-overlay");
+    if (overlay) {
+      overlay.classList.add("fade-out");
+    }
+
+    // Interceptar clicks en <a>
+    document.body.addEventListener("click", (e) => {
+      const target = e.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      const link = target.closest("a");
+      if (
+        link instanceof HTMLAnchorElement &&
+        link.href &&
+        link.target !== "_blank" &&
+        link.href.startsWith(window.location.origin)
+      ) {
+        e.preventDefault();
+
+        if (overlay) {
+          overlay.classList.remove("fade-out");
+        }
+
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 800);
+      }
+    });
+  });
+</script>
