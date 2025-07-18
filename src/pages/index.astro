@@ -81,16 +81,19 @@ import About from "../components/About.astro";
         class="relative z-10 flex-grow flex flex-col items-center justify-center w-full max-w-md mx-auto"
       >
         <h2 class="mb-4 text-white font-semibold text-3xl">
-          ÚLTIMO LANZAMIENTO
+          El sonido de Fase Alterna
         </h2>
         <iframe
           class="w-full aspect-video"
-          src="https://open.spotify.com/embed/album/0AToPZp8e6vGzo5Y4wzH27?utm_source=generator&theme=0"
+          data-testid="embed-iframe"
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/2HUoAGLgoaqBIMdhAva8uJ?utm_source=generator&theme=0"
+          width="100%"
+          height="430px"
+          allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
-          allowfullscreen=""
-          width="100%"
-          height="430px"></iframe>
+        ></iframe>
         <div class="mt-12">
           <SocialIcons client:load />
         </div>
