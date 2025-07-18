@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Instagram",
+    "href": "https://instagram.com/fase_alterna",
+    "icon": "FaInstagram"
+  },
+  {
+    "name": "Spotify",
+    "href": "https://open.spotify.com/intl-es/artist/6sjywsSKCM6e1NN9SE0hQm?si=pXt3sTvkSd-6vW5oCVpeBQ",
+    "icon": "FaSpotify"
+  },
+  {
+    "name": "TikTok",
+    "href": "https://www.tiktok.com/@fasealterna",
+    "icon": "FaTiktok"
+  },
+  {
+    "name": "SoundCloud",
+    "href": "https://soundcloud.com/fase_alterna",
+    "icon": "FaSoundcloud"
+  },
+  {
+    "name": "YouTube",
+    "href": "https://www.youtube.com/@FaseAlternaMusic/videos",
+    "icon": "FaYoutube"
+  }
+]
