@@ -1,0 +1,40 @@
+import React from "react";
+import type { ConcertTableProps } from "../types/concert";
+
+/**
+ * Renders a table of concerts with date, venue and ticket link
+ */
+const ConcertTable: React.FC<ConcertTableProps> = ({ concerts }) => {
+  return (
+    <table className="w-full table-auto border-collapse text-xs md:text-md text-white">
+      <tbody>
+        {concerts.map((concert, index) => (
+          <tr
+            key={concert.date + concert.venue}
+            style={{
+              backgroundColor:
+                index % 2 === 0
+                  ? "rgba(128, 128, 128, 0.4)"
+                  : "rgba(128, 128, 128, 0.2)",
+            }}
+          >
+            <td className="px-4 py-2 text-center">{concert.date}</td>
+            <td className="px-4 py-2 text-center">{concert.venue}</td>
+            <td className="px-4 py-2 text-center">
+              <a
+                href={concert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:underline"
+              >
+                ENTRADAS
+              </a>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+export default ConcertTable;
