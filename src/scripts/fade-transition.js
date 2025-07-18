@@ -8,40 +8,38 @@ function fadeIn(overlay) {
 
 function setupFadeTransition() {
   const overlay = document.getElementById("fade-overlay");
-
   if (!overlay) return;
 
+  // Al cargar la página, ocultar el overlay
+  fadeOut(overlay);
+
+  // Detectar restauración desde bfcache
   window.addEventListener("pageshow", (event) => {
-    // Si la página vuelve desde bfcache
     if (event.persisted) {
       fadeOut(overlay);
-      return;
     }
+  });
 
-    // En carga normal
-    fadeOut(overlay);
+  // Interceptar clicks en links internos una sola vez
+  document.body.addEventListener("click", (e) => {
+    const target = e.target;
+    if (!(target instanceof HTMLElement)) return;
 
-    // Interceptar navegación
-    document.body.addEventListener("click", (e) => {
-      const target = e.target;
-      if (!(target instanceof HTMLElement)) return;
+    const link = target.closest("a");
+    if (
+      link instanceof HTMLAnchorElement &&
+      link.href &&
+      link.target !== "_blank" &&
+      link.href.startsWith(window.location.origin)
+    ) {
+      e.preventDefault();
 
-      const link = target.closest("a");
-      if (
-        link instanceof HTMLAnchorElement &&
-        link.href &&
-        link.target !== "_blank" &&
-        link.href.startsWith(window.location.origin)
-      ) {
-        e.preventDefault();
+      fadeIn(overlay);
 
-        fadeIn(overlay);
-
-        setTimeout(() => {
-          window.location.href = link.href;
-        }, 800);
-      }
-    });
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 800);
+    }
   });
 }
 
