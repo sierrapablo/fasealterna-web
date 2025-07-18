@@ -1,47 +1,54 @@
-# Astro Starter Kit: Minimal
+# 🎸 Fase Alterna Website
 
-```sh
-npm create astro@latest -- --template minimal
+Sitio web oficial de la banda Fase Alterna. Desarrollado con [Astro](https://astro.build/), [React](https://reactjs.org/) y [TailwindCSS](https://tailwindcss.com/). Este sitio presenta los próximos conciertos, enlaces a plataformas de música, y material gráfico de la banda.
+
+---
+
+## 🚀 Tecnologías usadas
+
+- **Astro** – Framework web moderno basado en componentes.
+- **React** – Para componentes interactivos.
+- **TailwindCSS** – Utilizado para todo el diseño visual.
+- **TypeScript** – Tipado estático para una mayor seguridad.
+- **React Icons** – Íconos de redes sociales y plataformas musicales.
+
+---
+
+## 🧱 Estructura del proyecto
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+fasealterna-web/
+├── public/ # Archivos estáticos (logo, fondo, fuentes, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│ ├── components/ # Componentes Astro y React
+│ ├── data/ # Datos externos en JSON (conciertos, redes)
+│ ├── pages/ # Rutas del sitio (como /conciertos)
+│ ├── styles/ # Estilos globales o fuentes personalizadas
+│ ├── types/ # Tipado personalizado (sociales, conciertos, etc.)
+├── astro.config.mjs # Configuración de Astro
+└── tsconfig.json # Configuración de TypeScript
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🧑‍💻 Autor
 
-Any static assets, like images, can be placed in the `public/` directory.
+Desarrollado por [@sierrapablo](https://github.com/sierrapablo) – desarrollador freelance & guitarrista de Fase Alterna.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 📄 Licencia
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Este proyecto es privado y no se distribuye públicamente. Para más información, consulta [LICENSE.md](LICENSE.md).
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🌐 Conecta con Fase Alterna
+¡Sigue a Fase Alterna en tus plataformas favoritas para no perderte lanzamientos, conciertos y novedades!
+ - 📸 [Instagram](https://www.instagram.com/fase_alterna)
+ - 🎵 [Spotify](https://open.spotify.com/intl-es/artist/6sjywsSKCM6e1NN9SE0hQm?si=ZMtPivd1QguCEHQM9Cf1WQ)
+ - 🎶 [SoundCloud](https://soundcloud.com/fase_alterna)
+ - 📺 [YouTube](https://www.youtube.com/@FaseAlternaMusic/videos)
+ - 🎭 [TikTok](https://www.tiktok.com/@fasealterna)
+
+Ayúdanos compartiendo nuestras publicaciones y agregando nuestros temas a tus playlists.
+¡Nos vemos pronto sobre el escenario!
