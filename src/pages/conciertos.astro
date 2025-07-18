@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import SocialIcons from "../components/SocialIcons.tsx";
 import ConcertTable from "../components/ConcertTable.tsx";
+import Footer from "../components/Footer.astro";
 import concerts from "../data/concerts.json";
 ---
 
@@ -43,11 +44,6 @@ import concerts from "../data/concerts.json";
       </a>
     </main>
 
-    <footer class="relative z-10 text-white text-center py-4">
-      <div class="flex flex-col items-center space-y-1">
-        <span class="text-sm">fasealternamusic@gmail.com</span>
-        <span class="text-xs">© 2025 Fase Alterna</span>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
