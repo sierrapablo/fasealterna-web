@@ -21,9 +21,19 @@
 <div id="fade-overlay" class="fade-overlay"></div>
 
 <script is:inline>
-  // Esperar a que cargue todo
-  window.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("pageshow", (event) => {
     const overlay = document.getElementById("fade-overlay");
+
+    // Si la página se restaura desde bfcache
+    if (event.persisted) {
+      // Forzar la clase fade-out directamente
+      if (overlay) {
+        overlay.classList.add("fade-out");
+      }
+      return;
+    }
+
+    // Animación normal si se carga por primera vez
     if (overlay) {
       overlay.classList.add("fade-out");
     }
