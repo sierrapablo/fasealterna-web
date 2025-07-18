@@ -31,7 +31,7 @@ import Footer from "../components/Footer.astro";
         />
         <a
           href="/conciertos"
-          class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+          class="mt-4 px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
         >
           Conciertos
         </a>
@@ -47,8 +47,11 @@ import Footer from "../components/Footer.astro";
 
       <!-- Contenedor que crece para centrar iframe verticalmente -->
       <div
-        class="relative z-10 flex-grow flex items-center justify-center w-full max-w-md mx-auto"
+        class="relative z-10 flex-grow flex flex-col items-center justify-center w-full max-w-md mx-auto"
       >
+        <h2 class="mb-4 text-white font-semibold text-3xl">
+          ÚLTIMO LANZAMIENTO
+        </h2>
         <iframe
           class="w-full aspect-video"
           src="https://open.spotify.com/embed/album/0AToPZp8e6vGzo5Y4wzH27?utm_source=generator&theme=0"
