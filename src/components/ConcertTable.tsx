@@ -6,7 +6,7 @@ import type { ConcertTableProps } from "../types/concert";
  */
 const ConcertTable: React.FC<ConcertTableProps> = ({ concerts }) => {
   return (
-    <table className="w-full table-auto border-collapse text-xs md:text-md text-white">
+    <table className="w-full table-auto border-collapse text-[10px] md:text-lg text-white">
       <tbody>
         {concerts.map((concert, index) => (
           <tr
