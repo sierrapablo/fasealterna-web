@@ -10,7 +10,7 @@ function setupFadeTransition() {
   const overlay = document.getElementById("fade-overlay");
   if (!overlay) return;
 
-  // Al cargar la página, ocultar el overlay
+  // Al cargar la página, ocultar el overlay 
   fadeOut(overlay);
 
   // Detectar restauración desde bfcache
