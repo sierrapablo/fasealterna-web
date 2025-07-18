@@ -1,21 +1,21 @@
 ---
 import "../styles/global.css";
-import SocialIcons from "../components/SocialIcons.tsx";
-import ConcertTable from "../components/ConcertTable.tsx";
+import Social from "../components/Social.astro"
+import ConcertTable from "../components/ConcertTable.astro";
 import Footer from "../components/Footer.astro";
 import concerts from "../data/concerts.json";
-import FadeTransition from "../components/FadeTransition.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+const HEAD_CONTENT = {
+  title: "Conciertos - Fase Alterna",
+  description: "Descripcion genial sobre esta pagina v:"
+}
+
 ---
 
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Conciertos - Fase Alterna</title>
-  </head>
+  <BaseHead {...HEAD_CONTENT} />
   <body class="relative w-full flex flex-col py-8">
-    <FadeTransition />
     <div
       class="absolute inset-0 bg-cover bg-center"
       style="background-image: url(/background-2.avif);"
@@ -25,7 +25,7 @@ import FadeTransition from "../components/FadeTransition.astro";
     <main
       class="relative z-10 flex flex-col items-center justify-end gap-20 pt-4 pb-8"
     >
-      <SocialIcons client:load />
+      <Social/>
 
       <img
         src="/logo-w-box.png"
