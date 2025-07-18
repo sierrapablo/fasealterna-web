@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
-import SocialIcons from "../components/SocialIcons";
+import SocialIcons from "../components/SocialIcons.tsx";
+import Footer from "../components/Footer.astro";
+import FadeTransition from "../components/FadeTransition.astro";
 ---
 
 <html lang="es">
@@ -11,59 +13,59 @@ import SocialIcons from "../components/SocialIcons";
     <meta name="generator" content={Astro.generator} />
     <title>Fase Alterna</title>
   </head>
-  <body class="w-full flex flex-col relative overflow-x-hidden min-h-[200vh]">
-    <!-- Fondos + Overlay (z-0) -->
-    <div class="absolute inset-0 -z-10 flex flex-col">
-      <div
-        class="w-full min-h-screen bg-cover bg-center"
-        style="background-image: url(/background-1.avif);"
-      >
-      </div>
-      <div
-        class="w-full min-h-screen bg-cover bg-center"
-        style="background-image: url(/background.avif);"
-      >
-      </div>
-      <div class="absolute inset-0 bg-black/30"></div>
-    </div>
-
-    <!-- Parte superior con logo y botón -->
-    <main class="relative z-10 flex flex-col items-center gap-12 pt-40 pb-20">
-      <SocialIcons client:load />
-      <img
-        src="/logo-w-box.png"
-        alt="Logo de Fase Alterna"
-        class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
-      />
-      <a
-        href="/conciertos"
-        class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
-      >
-        Conciertos
-      </a>
-    </main>
-
-    <!-- Sección centrada en la segunda imagen -->
+  <body
+    class="w-full flex flex-col min-h-screen overflow-x-hidden bg-black text-white"
+  >
+    <FadeTransition />
+    <!-- Sección superior -->
     <section
-      class="relative z-10 flex items-center justify-center min-h-screen pt-120 px-4"
+      class="relative w-full min-h-screen flex flex-col items-center justify-center gap-20 px-6"
+      style="background-image: url(/background-1.avif); background-size: cover; background-position: center;"
     >
-      <iframe
-        class="w-full max-w-md aspect-video"
-        src="https://open.spotify.com/embed/album/0AToPZp8e6vGzo5Y4wzH27?utm_source=generator&theme=0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        allowfullscreen=""
-        width="100%"
-        height="400px"
-      ></iframe>
+      <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+      <div class="relative z-10 flex flex-col items-center gap-16">
+        <SocialIcons client:load />
+        <img
+          src="/logo-w-box.png"
+          alt="Logo de Fase Alterna"
+          class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
+        />
+        <a
+          href="/conciertos"
+          class="mt-4 px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+        >
+          Conciertos
+        </a>
+      </div>
     </section>
 
-    <!-- Pie de página -->
-    <footer class="relative z-10 text-white text-center py-6 mt-auto">
-      <div class="flex flex-col items-center space-y-1">
-        <span class="text-sm">fasealternamusic@gmail.com</span>
-        <span class="text-xs">© 2025 Fase Alterna</span>
+    <!-- Sección inferior -->
+    <section
+      class="relative w-full flex flex-col min-h-screen py-16 px-4"
+      style="background-image: url(/background.avif); background-size: cover; background-position: center;"
+    >
+      <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+      <!-- Contenedor que crece para centrar iframe verticalmente -->
+      <div
+        class="relative z-10 flex-grow flex flex-col items-center justify-center w-full max-w-md mx-auto"
+      >
+        <h2 class="mb-4 text-white font-semibold text-3xl">
+          ÚLTIMO LANZAMIENTO
+        </h2>
+        <iframe
+          class="w-full aspect-video"
+          src="https://open.spotify.com/embed/album/0AToPZp8e6vGzo5Y4wzH27?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          allowfullscreen=""
+          width="100%"
+          height="430px"></iframe>
       </div>
-    </footer>
+
+      <!-- Footer fijo abajo -->
+      <Footer class="relative z-10 mt-8" />
+    </section>
   </body>
 </html>

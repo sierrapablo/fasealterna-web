@@ -1,6 +1,10 @@
 ---
 import "../styles/global.css";
-import SocialIcons from "../components/SocialIcons.tsx"; // Ajusta si usas .jsx o .tsx
+import SocialIcons from "../components/SocialIcons.tsx";
+import ConcertTable from "../components/ConcertTable.tsx";
+import Footer from "../components/Footer.astro";
+import concerts from "../data/concerts.json";
+import FadeTransition from "../components/FadeTransition.astro";
 ---
 
 <html lang="es">
@@ -11,9 +15,10 @@ import SocialIcons from "../components/SocialIcons.tsx"; // Ajusta si usas .jsx 
     <title>Conciertos - Fase Alterna</title>
   </head>
   <body class="relative w-full flex flex-col py-8">
+    <FadeTransition />
     <div
       class="absolute inset-0 bg-cover bg-center"
-      style="background-image: url(/background-1.avif);"
+      style="background-image: url(/background-2.avif);"
     >
     </div>
     <div class="absolute inset-0 bg-black/70"></div>
@@ -28,55 +33,19 @@ import SocialIcons from "../components/SocialIcons.tsx"; // Ajusta si usas .jsx 
         class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
       />
       <section class="w-full max-w-4xl p-6 text-white">
-        <table class="w-full table-auto border-collapse text-xs md:text-md">
-          <tbody>
-            <tr style="background-color: rgba(128, 128, 128, 0.4);">
-              <td class="px-4 py-2 text-center">31/07/2025</td>
-              <td class="px-4 py-2 text-center">BLACK NOTE CLUB - VALENCIA</td>
-              <td class="px-4 py-2 text-center">
-                <a
-                  href="https://www.blacknoteclub.com/event-details/fase-alterna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-white hover:underline"
-                >
-                  ENTRADAS
-                </a>
-              </td>
-            </tr>
-            <tr style="background-color: rgba(128, 128, 128, 0.2);">
-              <td class="px-4 py-2 text-center">05/12/2025</td>
-              <td class="px-4 py-2 text-center">NAUW UR MUSIC VALENCIA</td>
-              <td class="px-4 py-2 text-center">
-                <a
-                  href="https://nauwurmusic.com/evento/valencia-loco-club-05-diciembre-2025/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-white hover:underline"
-                >
-                  ENTRADAS
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <ConcertTable client:load concerts={concerts} />
       </section>
       <div class="pt-20">
         <label class="text-white text-center">Más fechas por confirmar</label>
       </div>
       <a
         href="/"
-        class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+        class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md text-lg hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
       >
         Inicio
       </a>
     </main>
 
-    <footer class="relative z-10 text-white text-center py-4">
-      <div class="flex flex-col items-center space-y-1">
-        <span class="text-sm">fasealternamusic@gmail.com</span>
-        <span class="text-xs">© 2025 Fase Alterna</span>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
