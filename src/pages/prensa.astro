@@ -1,20 +1,20 @@
 ---
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
-import FadeTransition from "../components/FadeTransition.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+const HEAD_CONTENT = {
+  title: "Kit de prensa - Fase Alterna",
+  description: "Descripcion genial sobre esta pagina v:"
+}
+
 ---
 
 <html lang="es">
-  <head>
-    <title>Kit de prensa - Fase Alterna</title>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-  </head>
+  <BaseHead {...HEAD_CONTENT}/>
   <body
     class="w-full flex flex-col justify-center items-center min-h-screen overflow-x-hidden bg-black text-white"
   >
-    <FadeTransition />
     <section
       class="relative w-full min-h-screen flex flex-col items-center justify-center gap-20 px-6"
       style="

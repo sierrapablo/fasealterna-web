@@ -1,0 +1,38 @@
+---
+import type { ConcertTableProps } from "../types/concert";
+
+const { concerts } = Astro.props as ConcertTableProps;
+---
+
+<table
+    class="w-full table-auto border-collapse text-[10px] md:text-lg text-white"
+>
+    <tbody>
+        {
+            concerts.map((concert, index) => (
+                <tr
+                    style={{
+                        backgroundColor:
+                            index % 2 === 0
+                                ? "rgba(128, 128, 128, 0.4)"
+                                : "rgba(128, 128, 128, 0.2)",
+                    }}
+                >
+                    <td class="px-4 py-2 text-center">{concert.date}</td>
+                    <td class="px-4 py-2 text-center">{concert.venue}</td>
+                    <td class="px-4 py-2 text-center">
+                        <a
+                            href={concert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-white hover:underline"
+                        >
+                            ENTRADAS
+                        </a>
+                    </td>
+                </tr>
+            ))
+        }
+    </tbody>
+</table>
+
