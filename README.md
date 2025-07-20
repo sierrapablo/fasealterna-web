@@ -1,3 +1,7 @@
+[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
+
+---
+
 # 🎸 Fase Alterna Website
 
 Sitio web oficial de la banda Fase Alterna. Desarrollado con [Astro](https://astro.build/), [React](https://reactjs.org/) y [TailwindCSS](https://tailwindcss.com/). Este sitio presenta los próximos conciertos, enlaces a plataformas de música, y material gráfico de la banda.
@@ -40,6 +44,11 @@ fasealterna-web/
 
 Desarrollado por [@sierrapablo](https://github.com/sierrapablo) – desarrollador freelance & guitarrista de Fase Alterna.
 
+**¡Gracias a todos los colaboradores que han hecho posible este proyecto!**
+
+[![Contribuidores](https://contrib.rocks/image?repo=sierrapablo/fasealterna-web&max=500&columns=20)](https://github.com/sierrapablo/fasealterna-web/graphs/contributors)
+
+
 ---
 
 ## 📄 Licencia
@@ -58,3 +67,17 @@ Este proyecto es privado y no se distribuye públicamente. Para más informació
 
 Ayúdanos compartiendo nuestras publicaciones y agregando nuestros temas a tus playlists.
 ¡Nos vemos pronto sobre el escenario!
+
+---
+
+[contributors-shield]: https://img.shields.io/github/contributors/sierrapablo/fasealterna-web.svg?style=for-the-badge
+[contributors-url]: https://github.com/sierrapablo/fasealterna-web/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/sierrapablo/fasealterna-web.svg?style=for-the-badge
+[forks-url]: https://github.com/sierrapablo/fasealterna-web/network/members
+
+[stars-shield]: https://img.shields.io/github/stars/sierrapablo/fasealterna-web.svg?style=for-the-badge
+[stars-url]: https://github.com/sierrapablo/fasealterna-web/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/sierrapablo/fasealterna-web.svg?style=for-the-badge
+[issues-url]: https://github.com/sierrapablo/fasealterna-web/issues
