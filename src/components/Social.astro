@@ -1,52 +1,20 @@
 ---
 import { Icon } from "astro-icon/components";
-
-
-// source, busca mas iconos aca: https://pictogrammers.com/library/mdi/
-
+import { socialLinks } from "../data/social";
 ---
 
 <div class="flex items-center justify-center gap-3">
-    {
-        [
-            {
-                href: "https://instagram.com/fase_alterna",
-                icon: <Icon name="mdi:instagram" width="40" height="40" />,
-                name: "Instagram",
-            },
-            {
-                href: "https://open.spotify.com/intl-es/artist/6sjywsSKCM6e1NN9SE0hQm?si=pXt3sTvkSd-6vW5oCVpeBQ",
-                icon: <Icon name="mdi:spotify" width="40" height="40" />,
-                name: "Spotify",
-            },
-            {
-                href: "https://www.tiktok.com/@fasealterna",
-                icon: (
-                    <Icon name="simple-icons:tiktok" width="40" height="40" />
-                ),
-                name: "TikTok",
-            },
-            {
-                href: "https://soundcloud.com/fase_alterna",
-                icon: <Icon name="mdi:soundcloud" width="40" height="40" />,
-                name: "SoundCloud",
-            },
-            {
-                href: "https://www.youtube.com/@FaseAlternaMusic",
-                icon: <Icon name="mdi:youtube" width="40" height="40" />,
-                name: "YouTube",
-            },
-        ].map(item =>
-            <a
-
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={item.name}
-            class="transition-all duration-300 hover:drop-shadow-[0_0_6px_white] hover:text-black text-white"
-          >
-            {item.icon}
-          </a>
-         )
-    }
+  {
+    socialLinks.map((item) => (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={item.name}
+        class="transition-all duration-300 hover:drop-shadow-[0_0_6px_white] hover:text-black text-white"
+      >
+        <Icon name={item.iconName} width="40" height="40" />
+      </a>
+    ))
+  }
 </div>
