@@ -5,10 +5,8 @@ import { aboutText } from "../data/about.ts";
 <section
   class="relative w-full flex flex-col items-center justify-center gap-12 px-12 md:max-w-[75%] lg:max-w-[50%]"
 >
-  <h2 class="text-4xl font-bold">Del garaje al escenario</h2>
+  <h1 class="text-4xl font-bold pt-8">Del garaje al escenario</h1>
   <div class="text-lg leading-relaxed text-gray-200 space-y-6 text-justify">
-    {aboutText.map((paragraph) => (
-      <p set:html={paragraph} />
-    ))}
+    {aboutText.map((paragraph) => <p set:html={paragraph} />)}
   </div>
 </section>

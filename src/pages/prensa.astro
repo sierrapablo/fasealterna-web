@@ -2,21 +2,22 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
+import About from "../components/About.astro";
+import Social from "../components/Social.astro"
 
 const HEAD_CONTENT = {
   title: "Kit de prensa - Fase Alterna",
-  description: "Descripcion genial sobre esta pagina v:"
-}
-
+  description: "Descripcion genial sobre esta pagina v:",
+};
 ---
 
 <html lang="es">
-  <BaseHead {...HEAD_CONTENT}/>
+  <BaseHead {...HEAD_CONTENT} />
   <body
-    class="h-dvh w-full flex flex-col justify-center items-center min-h-screen overflow-x-hidden bg-black text-white"
+    class="w-full flex flex-col min-h-screen overflow-x-hidden items-center bg-black text-white"
   >
     <section
-      class="relative w-full h-full flex flex-col items-center justify-center gap-20 px-6"
+      class="relative w-full flex flex-col items-center justify-center gap-20 px-6"
       style="
         background-image:
           linear-gradient(
@@ -24,26 +25,50 @@ const HEAD_CONTENT = {
             rgba(0, 0, 0, 0) 85%,
             rgba(0, 0, 0, 1) 100%
           ),
-          url(/background-1.avif); background-size: cover; background-position: center;"
+          url(/background.avif); background-size: cover; background-position: center;"
     >
-      <div class="absolute inset-0 bg-black/75 z-0"></div>
-      <div class="relative z-10 flex flex-col items-center gap-10">
+      <div class="absolute inset-0 bg-black/40 z-0"></div>
+      <div class="relative z-10 flex flex-col items-center gap-16 mt-12">
+        <Social  />
         <img
           src="/logo-w-box.png"
           alt="Logo de Fase Alterna"
           class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
         />
-        <h1 class="text-white text-6xl">Kit de prensa</h1>
-        <p class="text-white text-4xl">Estamos trabajando en ello.</p>
-        <p class="text-white text-4xl">Pronto estará disponible.</p>
-        <a
-          href="/"
-          class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md text-lg hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
-        >
-          Volver al inicio
-        </a>
+        <div
+          class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xl mx-auto"
+        ></div>
+
+      <About />
+    </section>
+    <section class="py-12">
+      <div class="flex flex-col justify-center items-center gap-4 my-6">
+        <h2 class="font-bold pt-8 text-2xl text-white">Último Lanzamiento - Siempre lo mismo</h2>
+        <div class="grid grid-cols-2 justify-center items-center gap-12 px-12 my-6">
+          <iframe width="auto" height="auto" src="https://www.youtube.com/embed/iGmE89g2nzA?si=TtwfvZ_BO8KslJG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="auto" height="auto" src="https://www.youtube.com/embed/y7FSrBDssIk?si=MQwxPm4MVZEm73D1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="auto" height="auto" src="https://www.youtube.com/embed/QnSbUC6rlUQ?si=iPghxlMaEKIfOJ-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="auto" height="auto" src="https://www.youtube.com/embed/hMDdk0i-g9w?si=q1ZN34qI8DIQd2X-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center gap-4 my-6 pt-12">
+        <h2 class="font-bold pt-8 text-2xl text-white">Videoclips</h2>
+        <div class="flex flex-col justify-center items-center gap-4 my-6 px-12">
+          <iframe width="500px" height="312px" src="https://www.youtube.com/embed/yqxCMMLxQfg?si=mlcjCbr5zZnOyawK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="500px" height="312px" src="https://www.youtube.com/embed/oahC5hRs9jk?si=7sDeUoPmewUZZ7AS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
+    <a
+      href="/"
+      class="mt-12 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md text-lg hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+    >
+      Inicio
+    </a>
+    <div class="mt-12">
+          <Social  />
+        </div>
+
     <Footer />
   </body>
 </html>
