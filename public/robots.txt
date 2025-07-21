@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+
+Allow: /$
+Allow: /conciertos$
+Allow: /la-banda$
+
+Sitemap: https://fasealterna.netlify.app/sitemap.xml
