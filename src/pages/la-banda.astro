@@ -1,0 +1,94 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+import About from "../components/About.astro";
+import Social from "../components/Social.astro";
+
+const HEAD_CONTENT = {
+  title: "Kit de prensa - Fase Alterna",
+  description: "Descripcion genial sobre esta pagina v:",
+};
+---
+
+<html lang="es">
+  <BaseHead {...HEAD_CONTENT} />
+  <body
+    class="w-full flex flex-col min-h-screen overflow-x-hidden items-center bg-black text-white"
+  >
+    <section
+      class="relative w-full min-h-[80vh] flex flex-col items-center justify-center gap-20 px-6"
+      style="
+        background-image:
+          linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 85%,
+            rgba(0, 0, 0, 1) 100%
+          ),
+          url(/background-1.avif); background-size: cover; background-position: center;"
+    >
+      <div class="absolute inset-0 bg-black/30 z-0"></div>
+
+      <div class="relative z-10 flex flex-col items-center gap-16">
+        <Social />
+        <img
+          src="/logo-w-box.png"
+          alt="Logo de Fase Alterna"
+          class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
+        />
+        <div
+          class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xl mx-auto"
+        >
+          <a
+            href="/"
+            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+          >
+            Inicio
+          </a>
+          <a
+            href="/conciertos"
+            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+          >
+            Conciertos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative w-full flex flex-col min-h-screen py-16 px-4 items-center">
+      <About />
+      <div class="flex flex-col justify-center items-center gap-4 my-6 pt-12">
+        <h2 class="font-bold pt-8 text-2xl text-white">Videoclips</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 my-6 px-4 md:px-12 w-full max-w-6xl">          <iframe
+            class="w-full md:max-w-[360px] xl:max-w-full aspect-video"
+            src="https://www.youtube.com/embed/yqxCMMLxQfg?si=mlcjCbr5zZnOyawK"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+          <iframe
+            class="w-full md:max-w-[360px] xl:max-w-full aspect-video"
+            src="https://www.youtube.com/embed/oahC5hRs9jk?si=7sDeUoPmewUZZ7AS"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a
+        href="/"
+        class="w-max-w-xl mx-auto mt-12 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md text-lg hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+      >
+        Inicio
+      </a>
+      <div class="mt-12">
+        <Social />
+      </div>
+
+      <Footer />
+    </section>
+  </body>
+</html>
