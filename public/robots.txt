@@ -5,4 +5,4 @@ Allow: /$
 Allow: /conciertos$
 Allow: /la-banda$
 
-Sitemap: https://fasealterna.netlify.app/sitemap.xml
+Sitemap: https://fasealterna.netlify.app/sitemap-index.xml
