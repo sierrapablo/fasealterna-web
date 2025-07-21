@@ -1,25 +1,23 @@
 ---
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
-import About from "../components/About.astro";
 import BaseHead from "../components/BaseHead.astro";
-import Social from "../components/Social.astro"
+import Social from "../components/Social.astro";
 
 const HEAD_CONTENT = {
   title: "Fase Alterna",
-  description: "Descripcion genial sobre esta pagina v:"
-}
-
+  description: "Descripcion genial sobre esta pagina v:",
+};
 ---
 
 <html lang="es">
-  <BaseHead {...HEAD_CONTENT}/>
+  <BaseHead {...HEAD_CONTENT} />
   <body
     class="w-full flex flex-col min-h-screen overflow-x-hidden items-center bg-black text-white"
   >
     <!-- Sección superior -->
     <section
-      class="relative w-full min-h-screen flex flex-col items-center justify-center gap-20 px-6"
+      class="relative w-full min-h-[80vh] flex flex-col items-center justify-center gap-20 px-6"
       style="
         background-image:
           linear-gradient(
@@ -31,9 +29,8 @@ const HEAD_CONTENT = {
     >
       <div class="absolute inset-0 bg-black/30 z-0"></div>
 
-
       <div class="relative z-10 flex flex-col items-center gap-16">
-        <Social  />
+        <Social />
         <img
           src="/logo-w-box.png"
           alt="Logo de Fase Alterna"
@@ -43,16 +40,16 @@ const HEAD_CONTENT = {
           class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xl mx-auto"
         >
           <a
+            href="/la-banda"
+            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+          >
+            La Banda
+          </a>
+          <a
             href="/conciertos"
             class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
           >
             Conciertos
-          </a>
-          <a
-            href="/prensa"
-            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
-          >
-            Kit de prensa
           </a>
         </div>
       </div>
@@ -60,21 +57,19 @@ const HEAD_CONTENT = {
 
     <!-- Sección central -->
 
-    <About />
-
     <!-- Sección inferior -->
-    <section
-      class="relative w-full flex flex-col min-h-screen py-16 px-4"
-      style="
-        background-image:
-          linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 0) 15%
-          ),
-          url(/background.avif); background-size: cover; background-position: center;"
-    >
-      <div class="absolute inset-0 bg-black/30 z-0"></div>
+    <section class="relative w-full flex flex-col min-h-screen py-16 px-4">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover z-[-1]"
+      >
+        <source src="/video-lococlub.mp4" type="video/mp4" />
+        Tu navegador no soporta video HTML5.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-transparent z-0"></div>
 
       <!-- Contenedor que crece para centrar iframe verticalmente -->
       <div
@@ -92,10 +87,9 @@ const HEAD_CONTENT = {
           height="430px"
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+          loading="lazy"></iframe>
         <div class="mt-12">
-          <Social  />
+          <Social />
         </div>
       </div>
 
