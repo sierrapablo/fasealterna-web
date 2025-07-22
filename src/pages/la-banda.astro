@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
 import About from "../components/About.astro";
 import Social from "../components/Social.astro";
+import { Image } from "astro:assets";
+
+import faLogo from "../assets/logo-w-box.png";
 
 const HEAD_CONTENT = {
   title: "Fase Alterna | Banda emergente de rock alternativo desde Valencia",
@@ -18,24 +21,17 @@ const HEAD_CONTENT = {
     class="w-full flex flex-col min-h-screen overflow-x-hidden items-center bg-black text-white"
   >
     <section
-      class="relative w-full min-h-[80vh] flex flex-col items-center justify-center gap-20 px-6"
-      style="
-        background-image:
-          linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 85%,
-            rgba(0, 0, 0, 1) 100%
-          ),
-          url(/background-1.avif); background-size: cover; background-position: center;"
+      class="relative w-full min-h-[80vh] flex flex-col items-center justify-center gap-20 px-6 background-banda"
     >
       <div class="absolute inset-0 bg-black/30 z-0"></div>
 
       <div class="relative z-10 flex flex-col items-center gap-16">
         <Social />
-        <img
-          src="/logo-w-box.png"
+        <Image
+          src={faLogo}
           alt="Logo de Fase Alterna"
           class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
+          loading="eager"
         />
         <h1 class="sr-only">
           Banda emergente de rock alternativo desde Valencia
@@ -57,18 +53,22 @@ const HEAD_CONTENT = {
           class="flex flex-col md:flex-row justify-center items-center gap-4 my-6 px-4 md:px-12 w-full max-w-6xl"
         >
           <iframe
+            title="En algún lugar - Videoclip de Fase Alterna"
             class="w-full md:max-w-[360px] xl:max-w-full aspect-video"
             src="https://www.youtube.com/embed/yqxCMMLxQfg?si=mlcjCbr5zZnOyawK"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
             allowfullscreen></iframe>
           <iframe
+            title="Hablar de mí - Videoclip de Fase Alterna"
             class="w-full md:max-w-[360px] xl:max-w-full aspect-video"
             src="https://www.youtube.com/embed/oahC5hRs9jk?si=7sDeUoPmewUZZ7AS"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
             allowfullscreen></iframe>
         </div>
       </div>

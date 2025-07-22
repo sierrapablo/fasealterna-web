@@ -3,36 +3,31 @@ import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
 
+import faLogo from "../assets/logo-w-box.png";
+import { Image } from "astro:assets";
+
 const HEAD_CONTENT = {
   title: "Página no encontrada | Fase Alterna",
-  description: "La página que buscas no existe. Pero no todo está perdido: vuelve a la portada y descubre la música y próximos conciertos de Fase Alterna."
-}
-
-
+  description:
+    "La página que buscas no existe. Pero no todo está perdido: vuelve a la portada y descubre la música y próximos conciertos de Fase Alterna.",
+};
 ---
 
 <html lang="es">
-  <BaseHead {...HEAD_CONTENT}/>
+  <BaseHead {...HEAD_CONTENT} />
   <body
     class="h-dvh w-full flex flex-col justify-center items-center min-h-screen overflow-x-hidden bg-black text-white"
   >
     <section
-      class="relative w-full h-full flex flex-col items-center justify-center gap-20 px-6"
-      style="
-        background-image:
-          linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 85%,
-            rgba(0, 0, 0, 1) 100%
-          ),
-          url(/background-1.avif); background-size: cover; background-position: center;"
+      class="relative w-full h-full flex flex-col items-center justify-center gap-20 px-6 background-banda"
     >
       <div class="absolute inset-0 bg-black/75 z-0"></div>
       <div class="relative z-10 flex flex-col items-center gap-10">
-        <img
-          src="/logo-w-box.png"
+        <Image
+          src={faLogo}
           alt="Logo de Fase Alterna"
           class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
+          loading="eager"
         />
         <h1 class="text-white text-6xl">404</h1>
         <p class="text-white text-4xl">Lo sentimos, esta página no existe.</p>

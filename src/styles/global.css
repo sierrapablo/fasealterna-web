@@ -11,3 +11,31 @@
 body {
   font-family: 'Bebas Neue', sans-serif;
 }
+
+.background-banda {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 85%,
+      rgba(0, 0, 0, 1) 100%),
+    url('../assets/background-1.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-concert {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 85%,
+      rgba(0, 0, 0, 1) 100%),
+    url('../assets/background.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-disco {
+  background-image: url('../assets/background-2.webp');
+  background-size: cover;
+  background-position: center;
+}
