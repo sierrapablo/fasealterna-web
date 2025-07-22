@@ -1,0 +1,25 @@
+---
+import "../styles/global.css"
+---
+
+<div
+  id="cookiePopup"
+  class="z-50 hide bg-white absolute text-sm w-[70vw] max-w-[42.85em] shadow-[0_0_2em_rgba(5,0,31,0.15)] text-justify leading-[1.8em] py-8 px-[1.4em] transition-all duration-500 ease-in"
+>
+  <p class="text-center text-black text-lg font-semibold m-[1.4em]">Política de Cookies</p>
+  <p class="text-center text-black font-regular m-[1.4em]">
+    Este sitio web utiliza cookies para mejorar su experiencia de navegación e
+    información relevante. Antes de continuar utilizando nuestro sitio web,
+    usted acepta nuestra <a href="/">Política de Cookies</a> y nuestra
+    <a class="text-black" href="/">Política de Privacidad</a>
+  </p>
+  <button
+    id="acceptCookie"
+    class="bg-black text-white text-[1.2em] px-[1.4em] py-[1em] block relative mx-auto border-none"
+    >Aceptar</button
+  >
+</div>
+
+<script type="module">
+  import('/scripts/cookies.js');
+</script>
