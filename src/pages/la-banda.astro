@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
 import About from "../components/About.astro";
 import Social from "../components/Social.astro";
+import { Image } from "astro:assets";
 
 import faLogo from "../assets/logo-w-box.png";
 
@@ -26,10 +27,11 @@ const HEAD_CONTENT = {
 
       <div class="relative z-10 flex flex-col items-center gap-16">
         <Social />
-        <img
-          src={faLogo.src}
+        <Image
+          src={faLogo}
           alt="Logo de Fase Alterna"
           class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
+          loading="eager"
         />
         <h1 class="sr-only">
           Banda emergente de rock alternativo desde Valencia

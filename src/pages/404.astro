@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
 
 import faLogo from "../assets/logo-w-box.png";
+import { Image } from "astro:assets";
 
 const HEAD_CONTENT = {
   title: "Página no encontrada | Fase Alterna",
@@ -22,10 +23,11 @@ const HEAD_CONTENT = {
     >
       <div class="absolute inset-0 bg-black/75 z-0"></div>
       <div class="relative z-10 flex flex-col items-center gap-10">
-        <img
-          src={faLogo.src}
+        <Image
+          src={faLogo}
           alt="Logo de Fase Alterna"
           class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
+          loading="eager"
         />
         <h1 class="text-white text-6xl">404</h1>
         <p class="text-white text-4xl">Lo sentimos, esta página no existe.</p>

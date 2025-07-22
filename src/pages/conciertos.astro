@@ -7,6 +7,7 @@ import concerts from "../data/concerts.json";
 import BaseHead from "../components/BaseHead.astro";
 
 import faLogo from "../assets/logo-w-box.png";
+import { Image } from "astro:assets";
 
 const HEAD_CONTENT = {
   title: `Fase Alterna | Conciertos y gira "Siempre lo mismo"`,
@@ -39,10 +40,11 @@ const HEAD_CONTENT = {
     >
       <Social />
 
-      <img
-        src={faLogo.src}
+      <Image
+        src={faLogo}
         alt="Logo de Fase Alterna"
         class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
+        loading="eager"
       />
       <h2 class="text-white text-center text-4xl font-semibold">
         Gira Siempre lo mismo
