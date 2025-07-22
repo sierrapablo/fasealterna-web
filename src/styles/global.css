@@ -39,3 +39,19 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.hide {
+  opacity: 0;
+  bottom: 0;
+  pointer-events: none;
+  right: 2em;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 2em;
+  right: 2em;
+  transition: opacity 0.5s ease-in-out;
+}
