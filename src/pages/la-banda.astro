@@ -5,6 +5,8 @@ import BaseHead from "../components/BaseHead.astro";
 import About from "../components/About.astro";
 import Social from "../components/Social.astro";
 
+import faLogo from "../assets/logo-w-box.png";
+
 const HEAD_CONTENT = {
   title: "Fase Alterna | Banda emergente de rock alternativo desde Valencia",
   description:
@@ -18,22 +20,14 @@ const HEAD_CONTENT = {
     class="w-full flex flex-col min-h-screen overflow-x-hidden items-center bg-black text-white"
   >
     <section
-      class="relative w-full min-h-[80vh] flex flex-col items-center justify-center gap-20 px-6"
-      style="
-        background-image:
-          linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 85%,
-            rgba(0, 0, 0, 1) 100%
-          ),
-          url(/background-1.webp); background-size: cover; background-position: center;"
+      class="relative w-full min-h-[80vh] flex flex-col items-center justify-center gap-20 px-6 background-banda"
     >
       <div class="absolute inset-0 bg-black/30 z-0"></div>
 
       <div class="relative z-10 flex flex-col items-center gap-16">
         <Social />
         <img
-          src="/logo-w-box.png"
+          src={faLogo.src}
           alt="Logo de Fase Alterna"
           class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
         />

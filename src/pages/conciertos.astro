@@ -6,6 +6,8 @@ import Footer from "../components/Footer.astro";
 import concerts from "../data/concerts.json";
 import BaseHead from "../components/BaseHead.astro";
 
+import faLogo from "../assets/logo-w-box.png";
+
 const HEAD_CONTENT = {
   title: `Fase Alterna | Conciertos y gira "Siempre lo mismo"`,
   description:
@@ -16,7 +18,6 @@ const HEAD_CONTENT = {
 <html lang="es">
   <BaseHead {...HEAD_CONTENT} />
   <body class="relative w-full flex flex-col py-8">
-    
     <section class="sr-only">
       <h1>
         Conciertos de Fase Alterna: agenda en Valencia y otras ciudades – Gira
@@ -31,11 +32,7 @@ const HEAD_CONTENT = {
       </p>
     </section>
 
-    <div
-      class="absolute inset-0 bg-cover bg-center"
-      style="background-image: url(/background-2.webp);"
-    >
-    </div>
+    <div class="absolute inset-0 bg-cover bg-center background-disco"></div>
     <div class="absolute inset-0 bg-black/70"></div>
     <main
       class="relative z-10 flex flex-col items-center justify-end gap-20 pt-4 pb-8"
@@ -43,7 +40,7 @@ const HEAD_CONTENT = {
       <Social />
 
       <img
-        src="/logo-w-box.png"
+        src={faLogo.src}
         alt="Logo de Fase Alterna"
         class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
       />
