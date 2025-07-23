@@ -9,7 +9,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fasealterna.netlify.app",
+  site: "https://fasealterna.es",
   vite: {
     plugins: [tailwindcss()],
   },
