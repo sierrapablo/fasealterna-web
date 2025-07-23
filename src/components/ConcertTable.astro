@@ -1,11 +1,6 @@
 ---
 import { CONCERTS_API_ENDPOINT } from "astro:env/server";
-
-type Concert = {
-  date: string;
-  venue: string;
-  link: string;
-};
+import type { Concert } from "../types/concert";
 
 const response = await fetch(CONCERTS_API_ENDPOINT);
 const concerts: Concert[] = await response.json();
