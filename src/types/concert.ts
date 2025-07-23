@@ -3,7 +3,3 @@ export type Concert = {
   venue: string;
   link: string;
 };
-
-export type ConcertTableProps = {
-  concerts: Concert[];
-};
