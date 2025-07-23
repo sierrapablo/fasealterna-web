@@ -1,7 +1,14 @@
 ---
-import type { ConcertTableProps } from "../types/concert";
+import { CONCERTS_API_ENDPOINT } from "astro:env/server";
 
-const { concerts } = Astro.props as ConcertTableProps;
+type Concert = {
+  date: string;
+  venue: string;
+  link: string;
+};
+
+const response = await fetch(CONCERTS_API_ENDPOINT);
+const concerts: Concert[] = await response.json();
 ---
 
 <table
