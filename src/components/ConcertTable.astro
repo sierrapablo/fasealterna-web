@@ -2,38 +2,53 @@
 import { CONCERTS_API_ENDPOINT } from "astro:env/server";
 import type { Concert } from "../types/concert";
 
-const response = await fetch(CONCERTS_API_ENDPOINT);
-const concerts: Concert[] = await response.json();
+let concerts: Concert[] = [];
+let hasError = false;
+
+try {
+  const response = await fetch(CONCERTS_API_ENDPOINT);
+
+  if (!response.ok) {
+  } else {
+    concerts = await response.json();
+  }
+} catch (err) {
+  hasError = true;
+}
 ---
 
-<table
-  class="w-full table-auto border-collapse text-[10px] md:text-lg text-white"
->
-  <tbody>
-    {
-      concerts.map((concert, index) => (
-        <tr
-          style={{
-            backgroundColor:
-              index % 2 === 0
-                ? "rgba(128, 128, 128, 0.4)"
-                : "rgba(128, 128, 128, 0.2)",
-          }}
-        >
-          <td class="px-4 py-2 text-center">{concert.date}</td>
-          <td class="px-4 py-2 text-center">{concert.venue}</td>
-          <td class="px-4 py-2 text-center">
-            <a
-              href={concert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-white hover:underline"
-            >
-              ENTRADAS
-            </a>
-          </td>
-        </tr>
-      ))
-    }
-  </tbody>
-</table>
+{
+  hasError ? (
+    <div class="text-red-400 text-center text-lg font-semibold p-4">
+      No se pudieron cargar los conciertos. Inténtalo de nuevo más tarde.
+    </div>
+  ) : (
+    <table class="w-full table-auto border-collapse text-[10px] md:text-lg text-white">
+      <tbody>
+        {concerts.map((concert, index) => (
+          <tr
+            style={{
+              backgroundColor:
+                index % 2 === 0
+                  ? "rgba(128, 128, 128, 0.4)"
+                  : "rgba(128, 128, 128, 0.2)",
+            }}
+          >
+            <td class="px-4 py-2 text-center">{concert.date}</td>
+            <td class="px-4 py-2 text-center">{concert.venue}</td>
+            <td class="px-4 py-2 text-center">
+              <a
+                href={concert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white hover:underline"
+              >
+                ENTRADAS
+              </a>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
