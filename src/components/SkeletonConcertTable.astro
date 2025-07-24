@@ -1,15 +1,13 @@
 ---
-type TSkeletonTable = { rows: number }
+type TSkeletonTable = { rows: number };
 
 const { rows } = Astro.props as TSkeletonTable;
 ---
 
-
 <div class="flex flex-col">
-    {
-        Array.from({length: rows}, () => 
-        <div class="animate-pulse h-10 w-full odd:bg-[rgba(128,128,128,0.4)] even:bg-[rgba(128,128,128,0.2)] px-4 py-2">
-        </div>)
-    }
-    
+  {
+    Array.from({ length: rows }, () => (
+      <div class="animate-pulse h-10 w-full odd:bg-[rgba(128,128,128,0.4)] even:bg-[rgba(128,128,128,0.2)] px-4 py-2"></div>
+    ))
+  }
 </div>
