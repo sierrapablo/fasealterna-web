@@ -1,21 +1,7 @@
 ---
-import { CONCERTS_API_ENDPOINT } from "astro:env/server";
-import type { Concert } from "../types/concert";
+import { fetchConcerts } from "../api/concerts.ts";
 
-let concerts: Concert[] = [];
-let hasError = false;
-
-try {
-  const response = await fetch(CONCERTS_API_ENDPOINT);
-
-  if (!response.ok) {
-    hasError = true;
-  } else {
-    concerts = await response.json();
-  }
-} catch (err) {
-  hasError = true;
-}
+const { concerts, hasError } = await fetchConcerts();
 ---
 
 {
