@@ -1,7 +1,0 @@
-{
-  "language": "en",
-  "template": "commitlint",
-  "model": "gemini-2.5-flash",
-  "size": "16–35 characters",
-  "provider": "google"
-}
