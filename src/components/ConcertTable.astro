@@ -9,6 +9,7 @@ try {
   const response = await fetch(CONCERTS_API_ENDPOINT);
 
   if (!response.ok) {
+    hasError = true;
   } else {
     concerts = await response.json();
   }
