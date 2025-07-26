@@ -16,7 +16,7 @@ export default defineConfig({
   integrations: [icon(), sitemap()],
   env: {
     schema: {
-      CONCERTS_API_ENDPOINT: envField.string({ context: "server", access: "public" })
+      CONCERTS_API_ENDPOINT: envField.string({ context: "server", access: "secret" })
     }
   }
 });
