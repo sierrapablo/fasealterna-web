@@ -2,7 +2,7 @@
 import { defineConfig, envField } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import icon from "astro-icon";
-import netlify from '@astrojs/netlify';
+import vercel from '@astrojs/vercel/serverless';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
@@ -12,7 +12,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  adapter: netlify(),
+  adapter: vercel({}),
   integrations: [icon(), sitemap()],
   env: {
     schema: {
