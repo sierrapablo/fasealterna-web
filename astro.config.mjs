@@ -2,8 +2,8 @@
 import { defineConfig, envField } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import icon from "astro-icon";
-import vercel from '@astrojs/vercel/serverless';
 import sitemap from '@astrojs/sitemap';
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  adapter: vercel({}),
+  adapter: cloudflare(),
   integrations: [icon(), sitemap()],
   env: {
     schema: {
