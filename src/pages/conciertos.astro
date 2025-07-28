@@ -52,7 +52,7 @@ const HEAD_CONTENT = {
         Gira Siempre lo mismo
       </h2>
       <section class="w-full max-w-4xl p-6 text-white">
-        <ConcertTable server:defer>
+        <ConcertTable client:load>
           <SkeletonConcertTable slot="fallback" rows={10} />
         </ConcertTable>
       </section>
