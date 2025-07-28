@@ -1,0 +1,3 @@
+[build]
+  command = "pnpm install && pnpm run build"
+  publish = "dist"
