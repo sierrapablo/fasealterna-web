@@ -1,83 +1,131 @@
-[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
+<a name="readme-top"></a>
 
----
+<div align="center">
 
-# 🎸 Fase Alterna Website
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-Sitio web oficial de la banda Fase Alterna. Desarrollado con [Astro](https://astro.build/), [React](https://reactjs.org/) y [TailwindCSS](https://tailwindcss.com/). Este sitio presenta los próximos conciertos, enlaces a plataformas de música, y material gráfico de la banda.
+<a href="https://fasealterna.es" target="_blank" rel="noopener noreferrer">
+  <img width="720px" src="./src/assets/fallback.webp" alt="Logo Fase Alterna" />
+</a>
 
----
+## Web oficial de Fase Alterna
 
-## 🚀 Tecnologías usadas
+**Fase Alterna** es una banda de rock alternativo que combina energía en vivo con una producción cuidada en estudio. Aquí podrás encontrar toda la información oficial sobre lanzamientos, conciertos y novedades.
+[Reportar error](https://github.com/fasealterna/web/issues) · [Sugerir mejora](https://github.com/fasealterna/web/issues)
 
-- **Astro** – Framework web moderno basado en componentes.
-- **React** – Para componentes interactivos.
-- **TailwindCSS** – Utilizado para todo el diseño visual.
-- **TypeScript** – Tipado estático para una mayor seguridad.
-- **React Icons** – Íconos de redes sociales y plataformas musicales.
+</div>
 
----
+<details>
+<summary>Tabla de contenidos</summary>
 
-## 🧱 Estructura del proyecto
+- [Web oficial de Fase Alterna](#web-oficial-de-fase-alterna)
+- [Características principales](#características-principales)
+- [Para empezar](#para-empezar)
+  - [Prerequisitos](#prerequisitos)
+  - [Instalación](#instalación)
+- [Contribuir al proyecto](#contribuir-al-proyecto)
+- [🛠️ Stack](#️-stack)
+
+</details>
+
+## Características principales
+
+* **Conciertos**: Consulta dónde y cuándo tocará Fase Alterna.
+* **Galería multimedia**: Mira fotos y vídeos de nuestras sesiones de estudio y conciertos.
+* **Redes sociales**: Accede a nuestras redes oficiales y síguenos para más contenido.
+
+## Para empezar
+
+### Prerequisitos
+
+* Node.js (v18 o superior recomendado)
+* NVM (opcional para gestionar versiones)
+
+> Si usas NVM:
+
+```sh
+nvm install 18
+nvm use 18
 ```
-fasealterna-web/
-├── public/ # Archivos estáticos (logo, fondo, fuentes, etc.)
-├── src/
-│ ├── components/ # Componentes Astro y React
-│ ├── data/ # Datos externos en JSON (conciertos, redes)
-│ ├── pages/ # Rutas del sitio (como /conciertos)
-│ ├── styles/ # Estilos globales o fuentes personalizadas
-│ ├── types/ # Tipado personalizado (sociales, conciertos, etc.)
-├── astro.config.mjs # Configuración de Astro
-└── tsconfig.json # Configuración de TypeScript
-```
 
----
+### Instalación
 
-## ℹ️ Deploy status
+1. Clona el repositorio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f651f51c-ac01-4aab-b457-b785461e84b8/deploy-status)](https://app.netlify.com/projects/fasealterna/deploys)
+   ```sh
+   git clone https://github.com/fasealterna/web.git
+   ```
 
----
+2. Instala las dependencias
 
-## 🧑‍💻 Autor
+   ```sh
+   npm install
+   ```
 
-Desarrollado por [@sierrapablo](https://github.com/sierrapablo) – desarrollador freelance & guitarrista de Fase Alterna.
+3. Ejecuta la app en desarrollo
+
+   ```sh
+   npm run dev
+   ```
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
+## Contribuir al proyecto
+
+Queremos que esta web crezca junto con nuestra música. Si quieres ayudarnos a mejorarla, ¡toda contribución es bienvenida!
+
+1. Haz un fork del proyecto
+
+2. Clona tu fork
+
+   ```sh
+   git clone https://github.com/tuusuario/web.git
+   ```
+
+3. Crea tu rama de funcionalidad
+
+   ```sh
+   git switch -c feature/nueva-seccion
+   ```
+
+4. Haz tus cambios y súbelos
+
+   ```sh
+   git commit -m "Add: nueva sección"
+   git push origin feature/nueva-seccion
+   ```
+
+5. Abre un Pull Request
+
+Consulta nuestra [guía de contribución](https://github.com/fasealterna/web/blob/main/CONTRIBUTING.md) para más detalles.
 
 **¡Gracias a todos los colaboradores que han hecho posible este proyecto!**
 
 [![Contribuidores](https://contrib.rocks/image?repo=sierrapablo/fasealterna-web&max=500&columns=20)](https://github.com/sierrapablo/fasealterna-web/graphs/contributors)
 
+## 🛠️ Stack
 
----
+* [![Astro][astro-badge]][astro-url]
+* [![Typescript][typescript-badge]][typescript-url]
+* [![Tailwind CSS][tailwind-badge]][tailwind-url]
 
-## 📄 Licencia
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
-Este proyecto es privado y no se distribuye públicamente. Para más información, consulta [LICENSE.md](LICENSE.md).
-
----
-
-## 🌐 Conecta con Fase Alterna
-¡Sigue a Fase Alterna en tus plataformas favoritas para no perderte lanzamientos, conciertos y novedades!
- - 📸 [Instagram](https://www.instagram.com/fase_alterna)
- - 🎵 [Spotify](https://open.spotify.com/intl-es/artist/6sjywsSKCM6e1NN9SE0hQm?si=ZMtPivd1QguCEHQM9Cf1WQ)
- - 🎶 [SoundCloud](https://soundcloud.com/fase_alterna)
- - 📺 [YouTube](https://www.youtube.com/@FaseAlternaMusic/videos)
- - 🎭 [TikTok](https://www.tiktok.com/@fasealterna)
-
-Ayúdanos compartiendo nuestras publicaciones y agregando nuestros temas a tus playlists.
-¡Nos vemos pronto sobre el escenario!
-
----
-
-[contributors-shield]: https://img.shields.io/github/contributors/sierrapablo/fasealterna-web.svg?style=for-the-badge
-[contributors-url]: https://github.com/sierrapablo/fasealterna-web/graphs/contributors
-
-[forks-shield]: https://img.shields.io/github/forks/sierrapablo/fasealterna-web.svg?style=for-the-badge
-[forks-url]: https://github.com/sierrapablo/fasealterna-web/network/members
-
-[stars-shield]: https://img.shields.io/github/stars/sierrapablo/fasealterna-web.svg?style=for-the-badge
-[stars-url]: https://github.com/sierrapablo/fasealterna-web/stargazers
-
-[issues-shield]: https://img.shields.io/github/issues/sierrapablo/fasealterna-web.svg?style=for-the-badge
-[issues-url]: https://github.com/sierrapablo/fasealterna-web/issues
+[astro-url]: https://astro.build/
+[typescript-url]: https://www.typescriptlang.org/
+[tailwind-url]: https://tailwindcss.com/
+[astro-badge]: https://img.shields.io/badge/Astro-fff?style=for-the-badge&logo=astro&logoColor=bd303a&color=352563
+[typescript-badge]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
+[tailwind-badge]: https://img.shields.io/badge/Tailwind-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8
+[animations-badge]: https://img.shields.io/badge/@midudev/tailwind-animations-ff69b4?style=for-the-badge&logo=node.js&logoColor=white&color=blue
+[contributors-shield]: https://img.shields.io/github/contributors/fasealterna/web.svg?style=for-the-badge
+[contributors-url]: https://github.com/fasealterna/web/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/fasealterna/web.svg?style=for-the-badge
+[forks-url]: https://github.com/fasealterna/web/network/members
+[stars-shield]: https://img.shields.io/github/stars/fasealterna/web.svg?style=for-the-badge
+[stars-url]: https://github.com/fasealterna/web/stargazers
+[issues-shield]: https://img.shields.io/github/issues/fasealterna/web.svg?style=for-the-badge
+[issues-url]: https://github.com/fasealterna/web/issues
