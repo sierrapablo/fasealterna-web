@@ -71,8 +71,6 @@ nvm use 18
    npm run dev
    ```
 
-<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
-
 ## Contribuir al proyecto
 
 Queremos que esta web crezca junto con nuestra música. Si quieres ayudarnos a mejorarla, ¡toda contribución es bienvenida!
