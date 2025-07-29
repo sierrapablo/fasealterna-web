@@ -14,7 +14,7 @@
 ## Web oficial de Fase Alterna
 
 **Fase Alterna** es una banda de rock alternativo que combina energía en vivo con una producción cuidada en estudio. Aquí podrás encontrar toda la información oficial sobre lanzamientos, conciertos y novedades.
-[Reportar error](https://github.com/fasealterna/web/issues) · [Sugerir mejora](https://github.com/fasealterna/web/issues)
+[Reportar error](https://github.com/sierrapablo/fasealterna-web/issues) · [Sugerir mejora](https://github.com/sierrapablo/fasealterna-web/issues)
 
 </div>
 
@@ -100,7 +100,7 @@ Queremos que esta web crezca junto con nuestra música. Si quieres ayudarnos a m
 
 5. Abre un Pull Request
 
-Consulta nuestra [guía de contribución](https://github.com/fasealterna/web/blob/main/CONTRIBUTING.md) para más detalles.
+Consulta nuestra [guía de contribución](https://github.com/sierrapablo/fasealterna-web/blob/main/CONTRIBUTING.md) para más detalles.
 
 **¡Gracias a todos los colaboradores que han hecho posible este proyecto!**
 
@@ -122,10 +122,10 @@ Consulta nuestra [guía de contribución](https://github.com/fasealterna/web/blo
 [tailwind-badge]: https://img.shields.io/badge/Tailwind-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8
 [animations-badge]: https://img.shields.io/badge/@midudev/tailwind-animations-ff69b4?style=for-the-badge&logo=node.js&logoColor=white&color=blue
 [contributors-shield]: https://img.shields.io/github/contributors/fasealterna/web.svg?style=for-the-badge
-[contributors-url]: https://github.com/fasealterna/web/graphs/contributors
+[contributors-url]: https://github.com/sierrapablo/fasealterna-web/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/fasealterna/web.svg?style=for-the-badge
-[forks-url]: https://github.com/fasealterna/web/network/members
+[forks-url]: https://github.com/sierrapablo/fasealterna-web/network/members
 [stars-shield]: https://img.shields.io/github/stars/fasealterna/web.svg?style=for-the-badge
-[stars-url]: https://github.com/fasealterna/web/stargazers
+[stars-url]: https://github.com/sierrapablo/fasealterna-web/stargazers
 [issues-shield]: https://img.shields.io/github/issues/fasealterna/web.svg?style=for-the-badge
-[issues-url]: https://github.com/fasealterna/web/issues
+[issues-url]: https://github.com/sierrapablo/fasealterna-web/issues
