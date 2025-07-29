@@ -1,10 +1,37 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
 <footer class="relative z-10 text-white text-center py-6 mt-auto">
   <div class="flex flex-col items-center space-y-1">
-    <span class="text-sm">fasealternamusic@gmail.com</span>
-    <span class="text-xs">© 2025 Fase Alterna</span>
+    <span class="text-xs">© 2025 Fase Alterna - Todos los derechos reservados.</span>
+    <span class="text-xs text-gray-400 flex flex-row">
+      Creado por&nbsp;
+      <a
+        href="https://sierrapablo.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline hover:text-gray-300 transition-colors"
+      >
+        Pablo Sierra&nbsp;
+      </a>
+      <a
+        href="https://github.com/sierrapablo"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline hover:text-gray-300 transition-colors"
+      >
+        <Icon name="mdi:github" />
+      </a>
+      &nbsp;-&nbsp;
+      <a
+        href="https://github.com/sierrapablo/fasealterna-web"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline hover:text-gray-300 transition-colors"
+      >
+      Ver código fuente
+      </a>
+    </span>
   </div>
 </footer>
