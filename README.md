@@ -117,15 +117,20 @@ Consulta nuestra [guía de contribución](https://github.com/sierrapablo/fasealt
 [astro-url]: https://astro.build/
 [typescript-url]: https://www.typescriptlang.org/
 [tailwind-url]: https://tailwindcss.com/
+
 [astro-badge]: https://img.shields.io/badge/Astro-fff?style=for-the-badge&logo=astro&logoColor=bd303a&color=352563
 [typescript-badge]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
 [tailwind-badge]: https://img.shields.io/badge/Tailwind-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8
-[animations-badge]: https://img.shields.io/badge/@midudev/tailwind-animations-ff69b4?style=for-the-badge&logo=node.js&logoColor=white&color=blue
-[contributors-shield]: https://img.shields.io/github/contributors/fasealterna/web.svg?style=for-the-badge
+
+[contributors-shield]: https://img.shields.io/github/contributors/sierrapablo/fasealterna-web.svg?style=for-the-badge
 [contributors-url]: https://github.com/sierrapablo/fasealterna-web/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/fasealterna/web.svg?style=for-the-badge
+
+[forks-shield]: https://img.shields.io/github/forks/sierrapablo/fasealterna-web.svg?style=for-the-badge
 [forks-url]: https://github.com/sierrapablo/fasealterna-web/network/members
-[stars-shield]: https://img.shields.io/github/stars/fasealterna/web.svg?style=for-the-badge
+
+[stars-shield]: https://img.shields.io/github/stars/sierrapablo/fasealterna-web.svg?style=for-the-badge
 [stars-url]: https://github.com/sierrapablo/fasealterna-web/stargazers
-[issues-shield]: https://img.shields.io/github/issues/fasealterna/web.svg?style=for-the-badge
+
+[issues-shield]: https://img.shields.io/github/issues/sierrapablo/fasealterna-web.svg?style=for-the-badge
 [issues-url]: https://github.com/sierrapablo/fasealterna-web/issues
+
