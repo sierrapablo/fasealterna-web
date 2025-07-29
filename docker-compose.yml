@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: .
+    container_name: fasealterna-frontend
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - reverse-proxy
+
+networks:
+  reverse-proxy:
+    external: true

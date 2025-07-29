@@ -3,16 +3,17 @@ import { defineConfig, envField } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import icon from "astro-icon";
 import sitemap from '@astrojs/sitemap';
-import cloudflare from "@astrojs/cloudflare";
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
   site: "https://fasealterna.es",
   vite: {
+    // @ts-ignore
     plugins: [tailwindcss()],
   },
-  adapter: cloudflare(),
+  adapter: node({ mode: "standalone" }),
   integrations: [icon(), sitemap()],
   env: {
     schema: {

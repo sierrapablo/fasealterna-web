@@ -9,9 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.0",
+    "@astrojs/node": "^9.3.0",
     "@astrojs/react": "^4.3.0",
-    "@astrojs/vercel": "^8.2.3",
     "@iconify/react": "^6.0.0",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",
@@ -26,7 +25,6 @@
   "devDependencies": {
     "@astrojs/sitemap": "^3.4.1",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.43",
-    "wrangler": "^4.26.0"
+    "@iconify-json/simple-icons": "^1.2.43"
   }
 }
