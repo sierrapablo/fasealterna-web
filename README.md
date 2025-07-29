@@ -28,6 +28,9 @@
   - [Instalación](#instalación)
 - [Contribuir al proyecto](#contribuir-al-proyecto)
 - [🛠️ Stack](#️-stack)
+- [✨ Futuras implementaciones](#-futuras-implementaciones)
+  - [Reproductor de vídeos personalizado](#reproductor-de-vídeos-personalizado)
+  - [Reproductor de música personalizado](#reproductor-de-música-personalizado)
 
 </details>
 
@@ -110,6 +113,25 @@ Consulta nuestra [guía de contribución](https://github.com/sierrapablo/fasealt
 * [![Astro][astro-badge]][astro-url]
 * [![Typescript][typescript-badge]][typescript-url]
 * [![Tailwind CSS][tailwind-badge]][tailwind-url]
+
+
+## ✨ Futuras implementaciones
+
+### Reproductor de vídeos personalizado
+Actualmente, los vídeos se muestran mediante iframes de YouTube, lo que afecta negativamente al rendimiento de la web.
+
+Se planea sustituir estos iframes por un componente reproductor personalizado que:
+
+- Use un **renderizado tipo island** para hidratar solo el componente necesario en cliente, manteniendo el resto del sitio estático.
+- Sirva los vídeos propios almacenados en un bucket privado, accesible solo mediante un backend proxy, evitando exponer URLs públicas directamente.
+- Mejore el rendimiento general y la experiencia de usuario al cargar menos recursos innecesarios.
+- Mantenga segura la URL de los vídeos y permita mayor control sobre el contenido.
+
+Esta implementación permitirá un control total sobre la reproducción, evitando la carga pesada y las limitaciones de los iframes de YouTube.
+
+### Reproductor de música personalizado
+Con la misma intención que el reproductor de videos, se pplanea sustituir el reproductor de música de spotify por uno personalizado, evitando exponer las url de contenido.
+
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
