@@ -104,7 +104,8 @@ Consulta nuestra [guía de contribución](https://github.com/sierrapablo/fasealt
 
 **¡Gracias a todos los colaboradores que han hecho posible este proyecto!**
 
-[![Contribuidores](https://contrib.rocks/image?repo=sierrapablo/fasealterna-web&max=500&columns=20)](https://github.com/sierrapablo/fasealterna-web/graphs/contributors)
+👉 [Ver todos los contribuidores](https://github.com/sierrapablo/fasealterna-web/graphs/contributors)
+
 
 ## 🛠️ Stack
 
