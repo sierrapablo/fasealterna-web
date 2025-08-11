@@ -1,5 +1,5 @@
-import { CONCERTS_API_ENDPOINT } from "astro:env/server";
-import type { Concert } from "../types/concert";
+import { CONCERTS_API_ENDPOINT } from 'astro:env/server';
+import type { Concert } from '../types/concert';
 
 /**
  * Fetches the list of concerts from the API endpoint.
@@ -21,15 +21,15 @@ export async function fetchConcerts(): Promise<{
     const concerts = (await response.json()) as Concert[];
 
     const sortedConcerts = concerts.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
     );
 
     const formattedConcerts = sortedConcerts.map((concert) => ({
       ...concert,
-      date: new Date(concert.date).toLocaleDateString("es-ES", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
+      date: new Date(concert.date).toLocaleDateString('es-ES', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
       }),
     }));
     return { concerts: formattedConcerts, hasError: false };
