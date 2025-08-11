@@ -1,23 +1,23 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import icon from "astro-icon";
+import icon from 'astro-icon';
 import sitemap from '@astrojs/sitemap';
-import node from "@astrojs/node";
+import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  site: "https://fasealterna.es",
+  output: 'server',
+  prefetch: true,
+  site: 'https://fasealterna.es',
   vite: {
-    // @ts-ignore
     plugins: [tailwindcss()],
   },
-  adapter: node({ mode: "standalone" }),
+  adapter: node({ mode: 'standalone' }),
   integrations: [icon(), sitemap()],
   env: {
     schema: {
-      CONCERTS_API_ENDPOINT: envField.string({ context: "server", access: "secret" })
-    }
-  }
+      CONCERTS_API_ENDPOINT: envField.string({ context: 'server', access: 'secret' }),
+    },
+  },
 });
