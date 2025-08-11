@@ -137,28 +137,28 @@ Este estilo mejora la legibilidad del historial y facilita futuras búsquedas o 
 
 ---
 
-## ℹ️ Próxima mejora planteada
+## ℹ️ Próximas mejoras planteadas
 
-### Reproductor de vídeos personalizado
-Actualmente, los vídeos se muestran mediante iframes de YouTube, lo que afecta negativamente al rendimiento de la web.
+- [ ] **Reproductor de vídeos personalizado**  
+  Actualmente, los vídeos se muestran mediante iframes de YouTube, lo que afecta negativamente al rendimiento de la web.
 
-Se planea sustituir estos iframes por un componente reproductor personalizado que:
+  Se planea sustituir estos iframes por un componente reproductor personalizado que:
+  - Use un **renderizado tipo island** para hidratar solo el componente necesario en cliente, manteniendo el resto del sitio estático.
+  - Sirva los vídeos propios almacenados en un bucket privado, accesible solo mediante un backend proxy, evitando exponer URLs públicas directamente.
+  - Mejore el rendimiento general y la experiencia de usuario al cargar menos recursos innecesarios.
+  - Mantenga segura la URL de los vídeos y permita mayor control sobre el contenido.
 
-- Use un **renderizado tipo island** para hidratar solo el componente necesario en cliente, manteniendo el resto del sitio estático.
-- Sirva los vídeos propios almacenados en un bucket privado, accesible solo mediante un backend proxy, evitando exponer URLs públicas directamente.
-- Mejore el rendimiento general y la experiencia de usuario al cargar menos recursos innecesarios.
-- Mantenga segura la URL de los vídeos y permita mayor control sobre el contenido.
+  Esta implementación permitirá un control total sobre la reproducción, evitando la carga pesada y las limitaciones de los iframes de YouTube.
 
-Esta implementación permitirá un control total sobre la reproducción, evitando la carga pesada y las limitaciones de los iframes de YouTube.
+- [ ] **Reproductor de música personalizado**  
+  Con la misma intención que el reproductor de videos, se planea sustituir el reproductor de música de Spotify por uno personalizado, evitando exponer las URL de contenido.
 
-### Reproductor de música personalizado
-Con la misma intención que el reproductor de videos, se pplanea sustituir el reproductor de música de spotify por uno personalizado, evitando exponer las url de contenido.
+- [x] **Prefetch de las páginas cuando se haga hover sobre los botones de navegación**  
+  Para mejorar el rendimiento de la web, se planea implementar un prefetch en los botones de navegación que actúe al hacer hover sobre cada botón, para así mejorar el tiempo de respuesta al navegar en la web.
 
-### Prefetch de las páginas cuando se haga hover sobre los botones de navegación.
-Para mejorar el rendimiento de la web, se planea implementar un prefetch en los botones de navegación que actúe al hacer hover sobre cada botón, para así mejorar el tiempo de respuesta al navegar en la web.
+- [ ] **Traducción de la página**  
+  Se planea traducir la página a inglés y que se cargue dependiendo de la localización del usuario. Si el usuario se encuentra en un país de habla hispana, la página se mostrará en español, de lo contrario, en inglés.
 
-### Traducción de la página
-Se planea traducir la página a inglés y que se cargue dependiendo de la localización del usuario. Si el usuario se encuentra en un país de habla hispana, la página se mostrará en español, de lo contrario, en inglés.
 
 ---
 
