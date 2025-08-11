@@ -157,8 +157,7 @@ Este estilo mejora la legibilidad del historial y facilita futuras búsquedas o 
   Para mejorar el rendimiento de la web, se planea implementar un prefetch en los botones de navegación que actúe al hacer hover sobre cada botón, para así mejorar el tiempo de respuesta al navegar en la web.
 
 - [ ] **Traducción de la página**  
-  Se planea traducir la página a inglés y que se cargue dependiendo de la localización del usuario. Si el usuario se encuentra en un país de habla hispana, la página se mostrará en español, de lo contrario, en inglés.
-
+  Se planea traducir la página a inglés y que se cargue dependiendo de la localización del usuario. Si el usuario se encuentra en un país de habla hispana, la página se mostrará en español, de lo contrario, en inglés. Esto aplica específicamente al formateo de la fecha recibida por el backend en ConcertTable. Hay que considerar el formateo de fecha para los locales `'es-*'` y `'xx-XX'`.
 
 ---
 
