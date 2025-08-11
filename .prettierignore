@@ -4,7 +4,6 @@ dist/
 .vscode/
 docs/
 *.config.js
-*.config.mjs
 *.json
 *.md
 .env
