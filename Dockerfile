@@ -1,5 +1,5 @@
 # Etapa 1: Build
-FROM node:20-alpine AS builder
+FROM node:20 AS builder
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN pnpm run build
 RUN pnpm prune --prod
 
 # Etapa 2: Producción
-FROM node:20-alpine AS runner
+FROM node:20 AS runner
 
 WORKDIR /app
 
