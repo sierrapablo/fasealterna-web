@@ -1,7 +1,13 @@
 # Etapa 1: Build
-FROM node:20 AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
+
+RUN apk add --no-cache \
+  python3 \
+  make \
+  g++ \
+  vips-dev
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
@@ -14,7 +20,7 @@ RUN pnpm run build
 RUN pnpm prune --prod
 
 # Etapa 2: Producción
-FROM node:20 AS runner
+FROM node:20-alpine AS runner
 
 WORKDIR /app
 
