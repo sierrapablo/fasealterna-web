@@ -27,7 +27,7 @@ Este proyecto está abierto a colaboraciones de la comunidad. Ya seas desarrolla
 
 Antes de hacer commit, asegúrate de que:
 
-- Has ejecutado `npm lint` y el código pasa sin errores.
+- Has ejecutado `pnpm exec prettier --check . --config .prettierrc` y el código pasa sin errores. Si hay warnings o errores, ejecuta `pnpm exec prettier --write . --config .prettierrc`.
 - **No has modificado el estilo o indentación de líneas que no estás tocando directamente.**
   - Cambios innecesarios en el formato dificultan la revisión del código.
   - Si tu editor formatea automáticamente, haz staging selectivo (`git add -p`) para evitar incluir cambios no relacionados.
@@ -47,10 +47,11 @@ Para mantener un historial consistente y fácil de leer, utiliza este formato pa
 - Usa un **emoji representativo** al inicio.
 - La **palabra clave** en inglés indica el tipo de cambio.
 - Después de los dos puntos, describe brevemente lo que hiciste.
+- **Se recomienda usar la aplicación [gitzen](https://github.com/JorgeRosbel/gitzen)**
 
 ### Ejemplos
 
-```bash
+```
 ✨ feat: add gallery section with image lightbox
 🐛 fix: resolve crash on mobile navigation
 🎨 style: fix button alignment on homepage
@@ -93,17 +94,21 @@ Este estilo mejora la legibilidad del historial y facilita futuras búsquedas o 
 
 4. **Instala dependencias y ejecuta en local**
    ```bash
-   npm install
-   npm run dev
+   pnpm install
+   pnpm run dev
    ```
 
 5. **Haz tus cambios**
-   > Usa `npm lint` para asegurarte de que el código sigue el estilo del proyecto.
+   > Usa `pnpm exec prettier --check . --config .prettierrc` y `pnpm exec prettier --write . --config .prettierrc` para asegurarte de que el código sigue el estilo del proyecto.
 
 6. **Haz commit**
    ```bash
    git add .
    git commit -m "✨ feat: implement new section"
+   ```
+   o si usas **gitzen**
+   ```bash
+   gitzen batch
    ```
 
 7. **Haz push y abre un Pull Request**
@@ -129,6 +134,31 @@ Este estilo mejora la legibilidad del historial y facilita futuras búsquedas o 
 - Añadir nuevas secciones (prensa, galería, etc.).
 - Traducir el sitio o mejorar la accesibilidad.
 - Refactorizar componentes para mayor claridad o reutilización.
+
+---
+
+## ℹ️ Próxima mejora planteada
+
+### Reproductor de vídeos personalizado
+Actualmente, los vídeos se muestran mediante iframes de YouTube, lo que afecta negativamente al rendimiento de la web.
+
+Se planea sustituir estos iframes por un componente reproductor personalizado que:
+
+- Use un **renderizado tipo island** para hidratar solo el componente necesario en cliente, manteniendo el resto del sitio estático.
+- Sirva los vídeos propios almacenados en un bucket privado, accesible solo mediante un backend proxy, evitando exponer URLs públicas directamente.
+- Mejore el rendimiento general y la experiencia de usuario al cargar menos recursos innecesarios.
+- Mantenga segura la URL de los vídeos y permita mayor control sobre el contenido.
+
+Esta implementación permitirá un control total sobre la reproducción, evitando la carga pesada y las limitaciones de los iframes de YouTube.
+
+### Reproductor de música personalizado
+Con la misma intención que el reproductor de videos, se pplanea sustituir el reproductor de música de spotify por uno personalizado, evitando exponer las url de contenido.
+
+### Prefetch de las páginas cuando se haga hover sobre los botones de navegación.
+Para mejorar el rendimiento de la web, se planea implementar un prefetch en los botones de navegación que actúe al hacer hover sobre cada botón, para así mejorar el tiempo de respuesta al navegar en la web.
+
+### Traducción de la página
+Se planea traducir la página a inglés y que se cargue dependiendo de la localización del usuario. Si el usuario se encuentra en un país de habla hispana, la página se mostrará en español, de lo contrario, en inglés.
 
 ---
 

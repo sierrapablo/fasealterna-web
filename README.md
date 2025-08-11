@@ -29,8 +29,6 @@
 - [Contribuir al proyecto](#contribuir-al-proyecto)
 - [🛠️ Stack](#️-stack)
 - [✨ Futuras implementaciones](#-futuras-implementaciones)
-  - [Reproductor de vídeos personalizado](#reproductor-de-vídeos-personalizado)
-  - [Reproductor de música personalizado](#reproductor-de-música-personalizado)
 
 </details>
 
@@ -44,14 +42,14 @@
 
 ### Prerequisitos
 
-* Node.js (v18 o superior recomendado)
+* Node.js (v20 recomendado)
 * NVM (opcional para gestionar versiones)
 
 > Si usas NVM:
 
 ```sh
-nvm install 18
-nvm use 18
+nvm install 20
+nvm use 20
 ```
 
 ### Instalación
@@ -65,13 +63,13 @@ nvm use 18
 2. Instala las dependencias
 
    ```sh
-   npm install
+   pnpm install
    ```
 
 3. Ejecuta la app en desarrollo
 
    ```sh
-   npm run dev
+   pnpm run dev
    ```
 
 ## Contribuir al proyecto
@@ -116,21 +114,7 @@ Consulta nuestra [guía de contribución](https://github.com/sierrapablo/fasealt
 
 
 ## ✨ Futuras implementaciones
-
-### Reproductor de vídeos personalizado
-Actualmente, los vídeos se muestran mediante iframes de YouTube, lo que afecta negativamente al rendimiento de la web.
-
-Se planea sustituir estos iframes por un componente reproductor personalizado que:
-
-- Use un **renderizado tipo island** para hidratar solo el componente necesario en cliente, manteniendo el resto del sitio estático.
-- Sirva los vídeos propios almacenados en un bucket privado, accesible solo mediante un backend proxy, evitando exponer URLs públicas directamente.
-- Mejore el rendimiento general y la experiencia de usuario al cargar menos recursos innecesarios.
-- Mantenga segura la URL de los vídeos y permita mayor control sobre el contenido.
-
-Esta implementación permitirá un control total sobre la reproducción, evitando la carga pesada y las limitaciones de los iframes de YouTube.
-
-### Reproductor de música personalizado
-Con la misma intención que el reproductor de videos, se pplanea sustituir el reproductor de música de spotify por uno personalizado, evitando exponer las url de contenido.
+Consulta nuestra [guía de contribución](./CONTRIBUTING.md/#ℹ️-próxima-mejora-planteada) si quieres participar en los futuros desarrollos.
 
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
