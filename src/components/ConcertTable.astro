@@ -1,5 +1,5 @@
 ---
-import { fetchConcerts } from "../api/concerts.ts";
+import { fetchConcerts } from '../api/concerts.ts';
 
 const { concerts, hasError } = await fetchConcerts();
 ---
@@ -16,9 +16,7 @@ const { concerts, hasError } = await fetchConcerts();
           <tr
             style={{
               backgroundColor:
-                index % 2 === 0
-                  ? "rgba(128, 128, 128, 0.4)"
-                  : "rgba(128, 128, 128, 0.2)",
+                index % 2 === 0 ? 'rgba(128, 128, 128, 0.4)' : 'rgba(128, 128, 128, 0.2)',
             }}
           >
             <td class="px-4 py-2 text-center">{concert.date}</td>

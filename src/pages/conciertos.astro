@@ -1,46 +1,42 @@
 ---
-import "../styles/global.css";
-import { fade } from "astro:transitions";
-import Social from "../components/Social.astro";
-import ConcertTable from "../components/ConcertTable.astro";
-import Footer from "../components/Footer.astro";
-import BaseHead from "../components/BaseHead.astro";
-import SkeletonConcertTable from "../components/SkeletonConcertTable.astro";
+import '../styles/global.css';
+import { fade } from 'astro:transitions';
+import Social from '../components/Social.astro';
+import ConcertTable from '../components/ConcertTable.astro';
+import Footer from '../components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
+import SkeletonConcertTable from '../components/SkeletonConcertTable.astro';
 
-import faLogo from "../assets/logo-w-box.webp";
-import { Image } from "astro:assets";
+import faLogo from '../assets/logo-w-box.webp';
+import { Image } from 'astro:assets';
 
 export const prerender = true;
 
 const HEAD_CONTENT = {
   title: `Fase Alterna | Conciertos y gira "Siempre lo mismo"`,
   description:
-    "Consulta la agenda de conciertos de Fase Alterna en Valencia y otras ciudades: fechas, lugares, venta de entradas y experiencias en directo.",
+    'Consulta la agenda de conciertos de Fase Alterna en Valencia y otras ciudades: fechas, lugares, venta de entradas y experiencias en directo.',
 };
 ---
 
 <html lang="es">
   <BaseHead {...HEAD_CONTENT} />
-  <body class="relative w-full flex flex-col py-8" transition:animate={fade({ duration: "1s" })}>
+  <body class="relative w-full flex flex-col py-8" transition:animate={fade({ duration: '1s' })}>
     <section class="sr-only">
       <h1>
-        Conciertos de Fase Alterna: agenda en Valencia y otras ciudades – Gira
-        Siempre lo mismo
+        Conciertos de Fase Alterna: agenda en Valencia y otras ciudades – Gira Siempre lo mismo
       </h1>
       <p>
-        Vive la energía de Fase Alterna en directo. Consulta aquí todas las
-        fechas de la gira “Siempre lo mismo” en Valencia, Madrid, Barcelona y
-        otras ciudades de España. Encuentra información sobre entradas, salas de
-        conciertos y experiencias en vivo de una de las bandas emergentes del
-        rock alternativo.
+        Vive la energía de Fase Alterna en directo. Consulta aquí todas las fechas de la gira
+        “Siempre lo mismo” en Valencia, Madrid, Barcelona y otras ciudades de España. Encuentra
+        información sobre entradas, salas de conciertos y experiencias en vivo de una de las bandas
+        emergentes del rock alternativo.
       </p>
     </section>
 
     <div class="absolute inset-0 bg-cover bg-center background-disco"></div>
     <div class="absolute inset-0 bg-black/70"></div>
-    <main
-      class="relative z-10 flex flex-col items-center justify-end gap-20 pt-4"
-    >
+    <main class="relative z-10 flex flex-col items-center justify-end gap-20 pt-4">
       <Social />
 
       <Image
@@ -49,9 +45,7 @@ const HEAD_CONTENT = {
         class="max-w-[60%] max-h-[60%] sm:max-w-[40%] sm:max-h-[40%] md:max-w-[25%] md:max-h-[25%] object-contain"
         loading="eager"
       />
-      <h2 class="text-white text-center text-4xl font-semibold">
-        Próximos conciertos
-      </h2>
+      <h2 class="text-white text-center text-4xl font-semibold">Próximos conciertos</h2>
       <section class="w-full max-w-4xl p-6 text-white">
         <ConcertTable server:defer>
           <SkeletonConcertTable slot="fallback" rows={10} />
@@ -61,21 +55,21 @@ const HEAD_CONTENT = {
         <p class="text-white text-center">Más fechas por confirmar</p>
       </div>
       <div
-          class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xl mx-auto px-6"
+        class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-xl mx-auto px-6"
+      >
+        <a
+          href="/"
+          class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
         >
-          <a
-            href="/"
-            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
-          >
-            Inicio
-          </a>
-          <a
-            href="/la-banda"
-            class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
-          >
-            La banda
-          </a>
-        </div>
+          Inicio
+        </a>
+        <a
+          href="/la-banda"
+          class="flex items-center justify-center min-w-40 w-full sm:w-auto px-6 py-2 bg-transparent text-white text-lg border border-white font-semibold rounded-none shadow-md hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+        >
+          La banda
+        </a>
+      </div>
 
       <div class="mt-12">
         <Social />
