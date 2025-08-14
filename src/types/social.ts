@@ -3,3 +3,7 @@ export type SocialLink = {
   iconName: string;
   name: string;
 };
+
+export interface SkeletonSocialProps {
+  iconCount: number;
+}

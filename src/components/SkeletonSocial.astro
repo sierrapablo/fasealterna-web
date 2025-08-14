@@ -1,0 +1,13 @@
+---
+import type { SkeletonSocialProps } from '../types/social';
+
+const { iconCount } = Astro.props as SkeletonSocialProps;
+---
+
+<div class="flex items-center justify-center gap-3">
+  {
+    Array.from({ length: iconCount }).map(() => (
+      <div class="w-10 h-10 rounded-full bg-white opacity-75 animate-pulse" aria-hidden="true" />
+    ))
+  }
+</div>

@@ -1,9 +1,12 @@
 ---
 import '../styles/global.css';
 import Social from '../components/Social.astro';
+import SkeletonSocial from '../components/SkeletonSocial.astro';
 import { Image } from 'astro:assets';
 import faLogo from '../assets/logo-w-box.webp';
 import Layout from '../layouts/Layout.astro';
+
+export const prerender = true
 
 const HEAD_CONTENT = {
   title: 'Rock alternativo de Valencia – Banda emergente Fase Alterna',
@@ -23,7 +26,9 @@ const HEAD_CONTENT = {
       <div class="absolute inset-0 bg-black/30 z-0"></div>
 
       <div class="relative z-10 flex flex-col items-center gap-16">
-        <Social />
+        <Social server:defer>
+          <SkeletonSocial slot="fallback" iconCount={4}/>
+        </Social>
         <Image
           src={faLogo}
           alt="Logo de Fase Alterna"

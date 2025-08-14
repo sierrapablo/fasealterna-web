@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { fade } from 'astro:transitions';
 import Social from '../components/Social.astro';
+import SkeletonSocial from '../components/SkeletonSocial.astro';
 import ConcertTable from '../components/ConcertTable.astro';
 import Footer from '../components/Footer.astro';
 import BaseHead from '../components/BaseHead.astro';
@@ -37,7 +38,9 @@ const HEAD_CONTENT = {
     <div class="absolute inset-0 bg-cover bg-center background-disco"></div>
     <div class="absolute inset-0 bg-black/70"></div>
     <main class="relative z-10 flex flex-col items-center justify-end gap-20 pt-4">
-      <Social />
+      <Social server:defer>
+        <SkeletonSocial slot="fallback" iconCount={4}/>
+      </Social>
 
       <Image
         src={faLogo}
@@ -74,7 +77,9 @@ data-astro-prefetch="viewport"
       </div>
 
       <div class="mt-12">
-        <Social />
+        <Social server:defer>
+          <SkeletonSocial slot="fallback" iconCount={4}/>
+        </Social>
       </div>
     </main>
     <Footer />
