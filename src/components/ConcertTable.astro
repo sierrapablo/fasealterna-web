@@ -2,6 +2,9 @@
 import { fetchConcerts } from '../api/concerts.ts';
 
 const { concerts, hasError } = await fetchConcerts();
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
 ---
 
 {
@@ -12,27 +15,37 @@ const { concerts, hasError } = await fetchConcerts();
   ) : (
     <table class="w-full table-auto border-collapse text-[10px] md:text-lg text-white">
       <tbody>
-        {concerts.map((concert, index) => (
-          <tr
-            style={{
-              backgroundColor:
-                index % 2 === 0 ? 'rgba(128, 128, 128, 0.4)' : 'rgba(128, 128, 128, 0.2)',
-            }}
-          >
-            <td class="px-4 py-2 text-center">{concert.date}</td>
-            <td class="px-4 py-2 text-center">{concert.venue}</td>
-            <td class="px-4 py-2 text-center">
-              <a
-                href={concert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-white hover:underline"
-              >
-                ENTRADAS
-              </a>
-            </td>
-          </tr>
-        ))}
+        {concerts.map((concert, index) => {
+          const concertDate = new Date(concert.isoDate);
+          const isPast = concertDate < today;
+
+          return (
+            <tr
+              class:list={[{ 'line-through text-gray-500': isPast }]}
+              style={{
+                backgroundColor:
+                  index % 2 === 0 ? 'rgba(128, 128, 128, 0.4)' : 'rgba(128, 128, 128, 0.2)',
+              }}
+            >
+              <td class="px-4 py-2 text-center">{concert.date}</td>
+              <td class="px-4 py-2 text-center">{concert.venue}</td>
+              <td class="px-4 py-2 text-center">
+                {isPast || !concert.link ? (
+                  <span>ENTRADAS</span>
+                ) : (
+                  <a
+                    href={concert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white hover:underline"
+                  >
+                    ENTRADAS
+                  </a>
+                )}
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   )

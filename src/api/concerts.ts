@@ -1,6 +1,9 @@
 import { CONCERTS_API_ENDPOINT } from 'astro:env/server';
 import type { Concert } from '../types/concert';
 
+// The API returns concerts with a date that is an ISO string.
+type ApiConcert = { date: string; venue: string; link?: string };
+
 /**
  * Fetches the list of concerts from the API endpoint.
  * Sorts concerts by date (ascending).
@@ -18,19 +21,21 @@ export async function fetchConcerts(): Promise<{
       return { concerts: [], hasError: true };
     }
 
-    const concerts = (await response.json()) as Concert[];
+    const concertsFromApi = (await response.json()) as ApiConcert[];
 
-    const sortedConcerts = concerts.sort(
+    const sortedConcerts = concertsFromApi.sort(
       (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
     );
 
-    const formattedConcerts = sortedConcerts.map((concert) => ({
-      ...concert,
+    const formattedConcerts: Concert[] = sortedConcerts.map((concert) => ({
+      isoDate: concert.date,
       date: new Date(concert.date).toLocaleDateString('es-ES', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric',
       }),
+      venue: concert.venue,
+      link: concert.link,
     }));
     return { concerts: formattedConcerts, hasError: false };
   } catch (err) {
