@@ -4,3 +4,10 @@ export type Concert = {
   venue: string;
   link?: string;
 };
+
+// The API returns concerts with a date that is an ISO string.
+export type ApiConcert = {
+  date: string;
+  venue: string;
+  link?: string;
+};

@@ -1,8 +1,5 @@
 import { CONCERTS_API_ENDPOINT } from 'astro:env/server';
-import type { Concert } from '../types/concert';
-
-// The API returns concerts with a date that is an ISO string.
-type ApiConcert = { date: string; venue: string; link?: string };
+import type { Concert, ApiConcert } from '../types/concert';
 
 /**
  * Fetches the list of concerts from the API endpoint.
