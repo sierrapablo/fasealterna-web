@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
+
+import faLogo from '../assets/logo-w-box.webp';
+import { Image } from 'astro:assets';
+
+const HEAD_CONTENT = {
+  title: 'Galería de fotos | Fase Alterna',
+  description:
+    'Explora una selección de imágenes de los momentos más destacados de la banda: conciertos, grabaciones y sesiones de fotos.',
+};
+---
+
+<html lang="es">
+  <BaseHead {...HEAD_CONTENT} />
+  <body
+    class="h-dvh w-full flex flex-col justify-center items-center min-h-screen overflow-x-hidden bg-black text-white"
+  >
+    <section
+      class="relative w-full h-full flex flex-col items-center justify-center gap-20 px-6 background-banda"
+    >
+      <div class="absolute inset-0 bg-black/75 z-0"></div>
+      <div class="relative z-10 flex flex-col items-center gap-10">
+        <Image
+          src={faLogo}
+          alt="Logo de Fase Alterna"
+          class="max-w-[60%] sm:max-w-[40%] md:max-w-[25%] object-contain"
+          loading="eager"
+        />
+        <h1 class="text-white text-6xl">Galería</h1>
+        <p class="text-white text-4xl">Página en construcción.</p>
+        <a
+          href="/"
+          class="mt-4 px-6 py-2 bg-transparent text-white border border-white font-semibold rounded-none shadow-md text-lg hover:bg-gray-200 hover:text-gray-700 hover:border-gray-200 transition-colors duration-300"
+          data-astro-prefetch="viewport"
+        >
+          Volver al inicio
+        </a>
+      </div>
+    </section>
+    <Footer />
+  </body>
+</html>
