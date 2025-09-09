@@ -18,21 +18,19 @@ today.setHours(0, 0, 0, 0);
         {concerts.map((concert, index) => {
           const concertDate = new Date(concert.isoDate);
           const isPast = concertDate < today;
+          const hasActiveLink = !isPast && concert.link;
 
           return (
             <tr
-              class:list={[{ 'line-through text-gray-500': isPast }]}
-              style={{
-                backgroundColor:
-                  index % 2 === 0 ? 'rgba(128, 128, 128, 0.4)' : 'rgba(128, 128, 128, 0.2)',
-              }}
+              class:list={[
+                { 'line-through text-gray-500': isPast },
+                index % 2 === 0 ? 'bg-[rgba(128,128,128,0.4)]' : 'bg-[rgba(128,128,128,0.2)]',
+              ]}
             >
               <td class="px-4 py-2 text-center">{concert.date}</td>
               <td class="px-4 py-2 text-center">{concert.venue}</td>
               <td class="px-4 py-2 text-center">
-                {isPast || !concert.link ? (
-                  <span>ENTRADAS</span>
-                ) : (
+                {hasActiveLink ? (
                   <a
                     href={concert.link}
                     target="_blank"
@@ -41,6 +39,8 @@ today.setHours(0, 0, 0, 0);
                   >
                     ENTRADAS
                   </a>
+                ) : (
+                  <span>ENTRADAS</span>
                 )}
               </td>
             </tr>
